@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <material name="light_black">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+    </material>
+
+
+    <link name="base_footprint"/>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/base_link.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="light_black"/>
+        </visual>
+    </link>
+
+</robot>
