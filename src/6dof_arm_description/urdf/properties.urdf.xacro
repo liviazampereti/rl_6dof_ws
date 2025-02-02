@@ -32,33 +32,73 @@
 
     
 
-    <xacro:macro name="box_inertia" params="m l w h xyz rpy">
+    <xacro:macro name="base_link" params="xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
-            <mass value="${m}" />
-            <inertia ixx="${(m/12) * (h*h + l*l)}" ixy="0" ixz="0"
-                     iyy="${(m/12) * (w*w + l*l)}"  iyz="0"
-                     izz="${(m/12) * (w*w + h*h)}" />
+            <mass value="10.6734184" />
+            <inertia ixx="0.05702778" ixy="0" ixz="0"
+                     iyy="0.05702779"  iyz="0"
+                     izz="0.10703462" />
         </inertial>
     </xacro:macro>
 
-    <xacro:macro name="wheel_inertia" params="m r h xyz rpy">
+    <xacro:macro name="arm1_link" params="xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
-            <mass value="${m}" />
-            <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy="0" ixz="0"
-                     iyy="${(m/12) * (3*r*r + h*h)}"  iyz="0"
-                     izz="${(1/2) * (m * r*r)}" />
+            <mass value="16.02392927" />
+            <inertia ixx="0.13097774" ixy="-1.354e-8" ixz="0"
+                     iyy="0.11390137"  iyz="0.00013796"
+                     izz="0.06378491" />
         </inertial>
     </xacro:macro>
 
-    <xacro:macro name="caster_wheel_inertia" params="m r xyz rpy">
+    <xacro:macro name="arm2_link" params="xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
-            <mass value="${m}" />
-            <inertia ixx="${(2/5) * (m*r*r)}" ixy="0" ixz="0"
-                     iyy="${(2/5) * (m*r*r)}"  iyz="0"
-                     izz="${(2/5) * (m*r*r)}" />
+            <mass value="58.29018559" />
+            <inertia ixx="6.62579145" ixy="0.0000054" ixz="0"
+                     iyy="6.65994246"  iyz="-4e-8"
+                     izz="0.20137485" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="arm3_link" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="43.97624328" />
+            <inertia ixx="0.16111702" ixy="0" ixz="-9.935e-8"
+                     iyy="2.67279881"  iyz="5.713e-9"
+                     izz="2.70695549" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="arm4_link" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="16.02394366" />
+            <inertia ixx="0.13101946" ixy="1.335e-8" ixz="-2.826e-9"
+                     iyy="0.11390118"  iyz="-0.00166483"
+                     izz="0.06382633" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="arm5_link" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="11.25261767" />
+            <inertia ixx="0.03965941" ixy="2.335e-9" ixz="0.00003178"
+                     iyy="0.05673546"  iyz="-6.760e-10"
+                     izz="0.05036553" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="arm6_link" params="xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="9.94813346" />
+            <inertia ixx="0.05211159" ixy="0" ixz="0"
+                     iyy="0.05197757"  iyz="0"
+                     izz="0.02702159" />
         </inertial>
     </xacro:macro>
 

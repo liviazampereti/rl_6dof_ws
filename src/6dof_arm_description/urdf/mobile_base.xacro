@@ -12,9 +12,11 @@
             <origin xyz="0 0 0.04" rpy="0 0 0"/>
             <material name="light_black"/>
         </visual>
+
+        <xacro:base_link xyz="0 2.679e-8 0.01026544" rpy="0 0 0" />
     </link>
 
-    <link name="arm_1_link">
+    <link name="arm1_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_1.stl" scale="1 1 1"/>
@@ -22,9 +24,12 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <material name="salmon"/>
         </visual>
+
+        <xacro:arm1_link xyz="0 -0.00016159 0.14671717" rpy="0 0 0" />
+
     </link>
 
-    <link name="arm_2_link">
+    <link name="arm2_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_2.stl" scale="1 1 1"/>
@@ -32,9 +37,12 @@
             <origin xyz="0 0 0" rpy="0 0 -${pi/2.0}"/>
             <material name="yellow"/>
         </visual>
+
+        <xacro:arm2_link xyz="-0.00008884 0 0.47500021" rpy="0 0 -${pi/2.0}" />
+
     </link>
 
-    <link name="arm_3_link">
+    <link name="arm3_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_3.stl" scale="1 1 1"/>
@@ -42,9 +50,12 @@
             <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
             <material name="purple"/>
         </visual>
+
+        <xacro:arm3_link xyz="0.325 0 -0.00011793" rpy="0 ${pi/2} 0" />
+
     </link>
 
-    <link name="arm_4_link">
+    <link name="arm4_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_4.stl" scale="1 1 1"/>
@@ -52,9 +63,12 @@
             <origin xyz="0 0 0" rpy="${pi} 0 0"/>
             <material name="green"/>
         </visual>
+
+        <xacro:arm4_link xyz="0 0.0010614 -0.05328286" rpy="${pi} 0 0" />
+
     </link>
 
-    <link name="arm_5_link">
+    <link name="arm5_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_5.stl" scale="1 1 1"/>
@@ -62,9 +76,12 @@
             <origin xyz="0 0 0" rpy="${pi} 0 ${pi}"/>
             <material name="blue"/>
         </visual>
+
+        <xacro:arm5_link xyz="-0.0002301 0 -0.08772699" rpy="${pi} 0 ${pi}" />
+
     </link>
 
-    <link name="arm_6_link">
+    <link name="arm6_link">
         <visual>
             <geometry>
                 <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_6.stl" scale="1 1 1"/>
@@ -72,6 +89,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <material name="blue_tifany"/>
         </visual>
+
+        <xacro:arm6_link xyz="0 0 0.10531595" rpy="0 0 0" />
+
     </link>
 
     <joint name="base_joint" type="fixed">  
@@ -80,44 +100,44 @@
         <origin xyz ="0 0 0" rpy="0 0 0" />
     </joint>
 
-    <joint name="base_arm_1_joint" type="continuous">  
+    <joint name="base_arm1_joint" type="continuous">  
         <parent link="base_link" />
-        <child link="arm_1_link" />
+        <child link="arm1_link" />
         <origin xyz ="0 0 0.07" rpy="0 0 0" />
         <axis xyz="0 0 1" />
     </joint>
 
-    <joint name="arm_1_arm_2_joint" type="continuous">  
-        <parent link="arm_1_link" />
-        <child link="arm_2_link" />
+    <joint name="arm1_arm2_joint" type="continuous">  
+        <parent link="arm1_link" />
+        <child link="arm2_link" />
         <origin xyz ="0 -0.20 0.20" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
-    <joint name="arm_2_arm_3_joint" type="continuous">  
-        <parent link="arm_2_link" />
-        <child link="arm_3_link" />
+    <joint name="arm2_arm3_joint" type="continuous">  
+        <parent link="arm2_link" />
+        <child link="arm3_link" />
         <origin xyz ="0 0.20 0.95" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
-    <joint name="arm_3_arm_4_joint" type="continuous">  
-        <parent link="arm_3_link" />
-        <child link="arm_4_link" />
+    <joint name="arm3_arm4_joint" type="continuous">  
+        <parent link="arm3_link" />
+        <child link="arm4_link" />
         <origin xyz ="0.65 -0.20 0" rpy="0 -${pi/2} 0" />
         <axis xyz="0 1 0" />
     </joint>
 
-    <joint name="arm_4_arm_5_joint" type="continuous">  
-        <parent link="arm_4_link" />
-        <child link="arm_5_link" />
+    <joint name="arm4_arm5_joint" type="continuous">  
+        <parent link="arm4_link" />
+        <child link="arm5_link" />
         <origin xyz ="0 0 -0.20" rpy="0 0 ${pi}" />
         <axis xyz="0 0 1" />
     </joint>
 
-    <joint name="arm_5_arm_6_joint" type="continuous">  
-        <parent link="arm_5_link" />
-        <child link="arm_6_link" />
+    <joint name="arm5_arm6_joint" type="continuous">  
+        <parent link="arm5_link" />
+        <child link="arm6_link" />
         <origin xyz ="0.10 0 -0.1" rpy="0 ${pi/2} 0" />
         <axis xyz="0 0 1" />
     </joint>
