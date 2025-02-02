@@ -1,0 +1,28 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+WARNING: Package name "6dof_arm_description" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/livia/rl_6dof_ws/build/6dof_arm_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm.urdf.xacro
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/mobile_base.xacro
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/base_link.stl
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_1.stl
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_2.stl
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/ament_index/resource_index/package_run_dependencies/6dof_arm_description
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/ament_index/resource_index/parent_prefix_path/6dof_arm_description
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/environment/path.sh
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/environment/path.dsv
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/local_setup.bash
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/local_setup.sh
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/local_setup.zsh
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/local_setup.dsv
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/package.dsv
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/ament_index/resource_index/packages/6dof_arm_description
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/cmake/6dof_arm_descriptionConfig.cmake
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/cmake/6dof_arm_descriptionConfig-version.cmake
+-- Symlinking: /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/package.xml

@@ -1,2 +1,1 @@
-source;share/6dof_arm_description/environment/ament_prefix_path.sh
-source;share/6dof_arm_description/environment/path.sh
+/home/livia/rl_6dof_ws/build/6dof_arm_description/ament_cmake_environment_hooks/local_setup.dsv

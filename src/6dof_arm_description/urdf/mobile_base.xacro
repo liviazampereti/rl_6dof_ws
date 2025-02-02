@@ -12,8 +12,29 @@
     <link name="base_link">
         <visual>
             <geometry>
-                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/base_link.stl" scale="1 1 1"/>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/base_link.stl"/>
             </geometry>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+            <material name="light_black"/>
+        </visual>
+    </link>
+
+    <link name="arm_1_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_1.stl"/>
+            </geometry>
+            <origin xyz="0 0 0.07" rpy="0 0 0"/>
+            <material name="light_black"/>
+        </visual>
+    </link>
+
+    <link name="arm_2_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/link_2.stl"/>
+            </geometry>
+            <origin xyz="0 0.15 0" rpy="0 0 ${pi/2.0}"/>
             <material name="light_black"/>
         </visual>
     </link>
@@ -22,6 +43,20 @@
         <parent link="base_footprint" />
         <child link="base_link" />
         <origin xyz ="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <joint name="base_arm_1_joint" type="continuous">  
+        <parent link="base_link" />
+        <child link="arm_1_link" />
+        <origin xyz ="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="base_arm_2_joint" type="continuous">  
+        <parent link="arm_1_link" />
+        <child link="arm_2_link" />
+        <origin xyz ="0 0 0.27" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
     </joint>
 
 </robot>

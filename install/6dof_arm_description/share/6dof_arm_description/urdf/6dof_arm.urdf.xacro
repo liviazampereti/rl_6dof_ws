@@ -1,6 +1,1 @@
-<?xml version="1.0"?>
-<robot name="6dof_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-    <xacro:include filename="mobile_base.xacro"/>
-
-</robot>
+/home/livia/rl_6dof_ws/src/6dof_arm_description/urdf/6dof_arm.urdf.xacro
