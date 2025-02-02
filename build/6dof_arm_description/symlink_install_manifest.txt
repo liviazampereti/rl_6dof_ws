@@ -1,8 +1,13 @@
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm.urdf.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/mobile_base.xacro
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/properties.urdf.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/base_link.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_1.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_2.stl
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_3.stl
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_4.stl
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_5.stl
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_6.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/ament_index/resource_index/package_run_dependencies/6dof_arm_description
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/ament_index/resource_index/parent_prefix_path/6dof_arm_description
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description/environment/ament_prefix_path.sh

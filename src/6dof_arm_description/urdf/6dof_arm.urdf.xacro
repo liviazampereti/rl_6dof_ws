@@ -2,5 +2,6 @@
 <robot name="6dof_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:include filename="mobile_base.xacro"/>
+    <xacro:include filename="properties.urdf.xacro"/>
 
 </robot>
