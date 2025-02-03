@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000382] (-) JobUnselected: {'identifier': '6dof_arm_bringup'}
+[0.000415] (-) JobUnselected: {'identifier': '6dof_arm_description'}
+[0.000567] (-) EventReactorShutdown: {}

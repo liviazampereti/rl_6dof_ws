@@ -1,1 +1,1 @@
-gazebo_ros;robot_state_publisher;6dof_arm_description;rviz2;ament_lint_auto;ament_lint_common
+6dof_arm_description;gazebo_ros;robot_state_publisher;rviz2;ament_lint_auto;ament_lint_common

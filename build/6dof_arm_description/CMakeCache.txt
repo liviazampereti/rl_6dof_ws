@@ -444,7 +444,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/livia/.pyenv/shims/python3][cfound components: Interpreter ][v3.11.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/livia/.pyenv/shims/python3][cfound components: Interpreter ][v3.10.12()]
 _Python3_EXECUTABLE:INTERNAL=/home/livia/.pyenv/shims/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;5;64;;cpython-311-x86_64-linux-gnu;/home/livia/anaconda3/lib/python3.11;/home/livia/anaconda3/lib/python3.11;/home/livia/anaconda3/lib/python3.11/site-packages;/home/livia/anaconda3/lib/python3.11/site-packages
