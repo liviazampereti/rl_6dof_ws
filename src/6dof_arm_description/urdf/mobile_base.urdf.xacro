@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <link name="base_footprint"/>
+
 
     <link name="base_link">
         <visual>
@@ -54,16 +54,14 @@
             <material name="yellow"/>
         </visual>
 
-        <xacro:arm2_inertia xyz="-0.00008884 0 0.47500021" rpy="0 0 -${pi/2.0}" />
+        <xacro:arm2_inertia xyz="-0.00008884 0 0.47100021" rpy="0 0 -${pi/2.0}" />
 
         <collision>
             <geometry>
                 <box size="0.15 0.20 1.10" />
             </geometry>
             <origin xyz="0 0 0.475" rpy="0 0 0"/>
-        </collision>
-
-        
+        </collision>      
 
     </link>
 
@@ -84,8 +82,7 @@
             </geometry>
             <origin xyz="0.325 0 0" rpy="0 ${pi/2} 0"/>
         </collision>
-
-        
+      
 
     </link>
 
@@ -106,9 +103,7 @@
             </geometry>
             <origin xyz="0 0 -0.0625" rpy="0 0 0"/>
         </collision>
-
-
-        
+              
 
     </link>
 
@@ -130,7 +125,7 @@
             <origin xyz="0 0 -0.0875" rpy="0 0 0"/>
         </collision>
 
-        
+              
 
     </link>
 
@@ -152,54 +147,66 @@
             <origin xyz="0 0 0.10" rpy="0 0 0"/>
         </collision>
 
+        
+
     </link>
 
-    <joint name="base_joint" type="fixed">  
-        <parent link="base_footprint" />
-        <child link="base_link" />
-        <origin xyz ="0 0 0" rpy="0 0 0" />
+    <link name="world"/>    
+
+    <joint name="world_base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
     </joint>
 
-    <joint name="base_arm1_joint" type="continuous">  
+
+
+    <joint name="base_arm1_joint" type="revolute">  
         <parent link="base_link" />
         <child link="arm1_link" />
         <origin xyz ="0 0 0.07" rpy="0 0 0" />
         <axis xyz="0 0 1" />
+        <limit lower="-${pi}" upper="${pi}" effort="10" velocity="1.0"/> 
     </joint>
 
-    <joint name="arm1_arm2_joint" type="continuous">  
+    <joint name="arm1_arm2_joint" type="revolute">  
         <parent link="arm1_link" />
         <child link="arm2_link" />
         <origin xyz ="0 -0.20 0.20" rpy="0 0 0" />
         <axis xyz="0 1 0" />
+        <limit lower="-${pi}" upper="${pi}" effort="100" velocity="1.0"/> 
     </joint>
 
-    <joint name="arm2_arm3_joint" type="continuous">  
+    <joint name="arm2_arm3_joint" type="revolute">  
         <parent link="arm2_link" />
         <child link="arm3_link" />
         <origin xyz ="0 0.20 0.95" rpy="0 0 0" />
         <axis xyz="0 1 0" />
+        <limit lower="-${pi}" upper="${pi}" effort="10" velocity="1.0"/> 
     </joint>
 
-    <joint name="arm3_arm4_joint" type="continuous">  
+    <joint name="arm3_arm4_joint" type="revolute">  
         <parent link="arm3_link" />
         <child link="arm4_link" />
         <origin xyz ="0.65 -0.20 0" rpy="0 -${pi/2} 0" />
         <axis xyz="0 1 0" />
+        <limit lower="-${pi}" upper="${pi}" effort="10" velocity="1.0"/> 
     </joint>
 
-    <joint name="arm4_arm5_joint" type="continuous">  
+    <joint name="arm4_arm5_joint" type="revolute">  
         <parent link="arm4_link" />
         <child link="arm5_link" />
         <origin xyz ="0 0 -0.20" rpy="0 0 ${pi}" />
         <axis xyz="0 0 1" />
+        <limit lower="-${pi}" upper="${pi}" effort="10" velocity="1.0"/> 
     </joint>
 
-    <joint name="arm5_arm6_joint" type="continuous">  
+    <joint name="arm5_arm6_joint" type="revolute">  
         <parent link="arm5_link" />
         <child link="arm6_link" />
         <origin xyz ="0.10 0 -0.1" rpy="0 ${pi/2} 0" />
         <axis xyz="0 0 1" />
+        <limit lower="-${pi}" upper="${pi}" effort="10" velocity="1.0"/> 
     </joint>
 
 
