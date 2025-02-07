@@ -23,6 +23,7 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/humble\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/livia/ros2_ws2/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/livia/ros2_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install\local_setup.ps1"
 

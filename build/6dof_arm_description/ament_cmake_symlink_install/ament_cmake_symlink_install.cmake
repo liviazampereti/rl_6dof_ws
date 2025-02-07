@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "urdf" "rviz" "meshes" "DESTINATION" "share/6dof_arm_description/")
-ament_cmake_symlink_install_directory("/home/livia/rl_6dof_ws/src/6dof_arm_description" DIRECTORY "urdf" "rviz" "meshes" "DESTINATION" "share/6dof_arm_description/")
+# install(DIRECTORY "urdf" "rviz" "meshes" "config" "DESTINATION" "share/6dof_arm_description/")
+ament_cmake_symlink_install_directory("/home/livia/rl_6dof_ws/src/6dof_arm_description" DIRECTORY "urdf" "rviz" "meshes" "config" "DESTINATION" "share/6dof_arm_description/")
 
 # install(FILES "/home/livia/rl_6dof_ws/build/6dof_arm_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/6dof_arm_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/livia/rl_6dof_ws/src/6dof_arm_description" FILES "/home/livia/rl_6dof_ws/build/6dof_arm_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/6dof_arm_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
