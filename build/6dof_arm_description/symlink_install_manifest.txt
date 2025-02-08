@@ -1,11 +1,10 @@
-/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm.trans
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm.urdf.xacro
-/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm_gazebo_properties.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/6dof_arm_properties.urdf.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/lidar_sensor.urdf.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/mobile_base.urdf.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//urdf/ros2_control.xacro
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/base_link.stl
+/home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/gripper.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_1.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_2.stl
 /home/livia/rl_6dof_ws/install/6dof_arm_description/share/6dof_arm_description//meshes/6dof_arm/link_3.stl

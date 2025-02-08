@@ -129,6 +129,40 @@
         </collision>
     </link>
 
+    <link name="gripper1_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/gripper.stl" scale="1 1 1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+            <material name="light_black"/>
+        </visual>
+        <xacro:gripper_inertia xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0" />
+        <collision>
+            <geometry>
+                <box size="0.015 0.16050005 0.07295455" />
+            </geometry>
+            <origin xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="gripper2_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://6dof_arm_description/meshes/6dof_arm/gripper.stl" scale="1 1 1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+            <material name="light_black"/>
+        </visual>
+        <xacro:gripper_inertia xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0" />
+        <collision>
+            <geometry>
+                <box size="0.015 0.16050005 0.07295455" />
+            </geometry>
+            <origin xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0"/>
+        </collision>
+    </link>
+
 
 
     <link name="world"/>    
@@ -185,6 +219,22 @@
         <origin xyz ="0.10 0 -0.1" rpy="0 ${pi/2} 0" />
         <axis xyz="0 0 1" />
         <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+    </joint>
+
+    <joint name="arm6_gripper1_joint" type="revolute">  
+        <parent link="arm6_link" />
+        <child link="gripper1_link" />
+        <origin xyz ="-0.0075 0.025 0.245" rpy="0 ${pi} 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="${-pi/4}" upper="${-pi/2}" effort="10" velocity="1.0"/> 
+    </joint>
+
+    <joint name="arm6_gripper2_joint" type="revolute">  
+        <parent link="arm6_link" />
+        <child link="gripper2_link" />
+        <origin xyz ="0.0075 -0.025 0.245" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="${pi/2}" upper="${3/4*pi}" effort="10" velocity="1.0"/> 
     </joint>
 
 

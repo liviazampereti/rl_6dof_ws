@@ -24,6 +24,8 @@ joint_trajectory_controller:
       - arm3_arm4_joint
       - arm4_arm5_joint
       - arm5_arm6_joint
+      - arm6_gripper1_joint
+      - arm6_gripper2_joint
 
 
     state_publish_rate: 50.0 # Defaults to 50
