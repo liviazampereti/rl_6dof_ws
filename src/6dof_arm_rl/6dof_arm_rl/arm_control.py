@@ -13,7 +13,7 @@ class RobotCommander(Node):
         msg.joint_names = ['base_arm1_joint', 'arm1_arm2_joint', 'arm2_arm3_joint', 'arm3_arm4_joint', 'arm4_arm5_joint', 'arm5_arm6_joint']
         
         point = JointTrajectoryPoint()
-        point.positions = [0.0, 0.5, -0.5, 0.0, 0.3, -0.2]
+        point.positions = [0.5, 0.5, -0.5, -0.5, 0.3, -0.2]
         point.time_from_start.sec = 2
         
         msg.points.append(point)
