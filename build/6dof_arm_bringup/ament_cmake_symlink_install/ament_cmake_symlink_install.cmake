@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "DESTINATION" "share/6dof_arm_bringup/")
-ament_cmake_symlink_install_directory("/home/livia/rl_6dof_ws/src/6dof_arm_bringup" DIRECTORY "launch" "DESTINATION" "share/6dof_arm_bringup/")
+# install(DIRECTORY "launch" "worlds" "DESTINATION" "share/6dof_arm_bringup/")
+ament_cmake_symlink_install_directory("/home/livia/rl_6dof_ws/src/6dof_arm_bringup" DIRECTORY "launch" "worlds" "DESTINATION" "share/6dof_arm_bringup/")
 
 # install(FILES "/home/livia/rl_6dof_ws/build/6dof_arm_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/6dof_arm_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/livia/rl_6dof_ws/src/6dof_arm_bringup" FILES "/home/livia/rl_6dof_ws/build/6dof_arm_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/6dof_arm_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

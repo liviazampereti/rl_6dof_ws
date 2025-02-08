@@ -12,8 +12,9 @@
     </node>
 
     <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py" >
+        <arg name="world" value="$(find-pkg-share 6dof_arm_bringup)/worlds/box_world.world" />
     </include>
-
+    
 
     <node pkg="gazebo_ros" exec="spawn_entity.py"
           args="-topic robot_description -entity 6dof_arm" />
