@@ -1,0 +1,1 @@
+/home/livia/rl_6dof_ws/build/6dof_arm_bringup/ament_cmake_environment_hooks/local_setup.bash

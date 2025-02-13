@@ -1,0 +1,36 @@
+<launch>
+    <let name="urdf_path" 
+        value="$(find-pkg-share 6dof_arm_description)/urdf/6dof_arm.urdf.xacro" />
+
+    <let name="6dof_arm_controllers" 
+        value="$(find-pkg-share 6dof_arm_description)/config/6dof_arm_controllers.yaml" />
+
+    <node pkg="robot_state_publisher" 
+        exec="robot_state_publisher">
+            <param name="robot_description"
+                value="$(command 'xacro $(var urdf_path)')"/>
+    </node>
+
+    <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py" >
+        <arg name="world" value="$(find-pkg-share 6dof_arm_bringup)/worlds/box_world.world" />
+    </include>
+    
+
+    <node pkg="gazebo_ros" exec="spawn_entity.py"
+          args="-topic robot_description -entity 6dof_arm" />
+
+    <node pkg="controller_manager" exec="ros2_control_node" output="screen" >
+        <param name="robot_controllers"
+                value="$(var 6dof_arm_controllers)"/>
+    </node>
+
+    <node pkg="controller_manager" exec="spawner"
+          args="joint_state_broadcaster"/>
+
+    <node pkg="controller_manager" exec="spawner"
+          args="joint_trajectory_controller"/>
+
+    <node pkg="6dof_arm_rl" exec="arm_control"/>
+
+
+</launch>

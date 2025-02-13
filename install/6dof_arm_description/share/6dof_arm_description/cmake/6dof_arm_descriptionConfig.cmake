@@ -1,0 +1,1 @@
+/home/livia/rl_6dof_ws/build/6dof_arm_description/ament_cmake_core/6dof_arm_descriptionConfig.cmake
