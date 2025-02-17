@@ -1,3 +1,0 @@
-[console_scripts]
-arm_control = 6dof_arm_rl.arm_control:main
-
