@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/rosidl_generator_py/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/sixdof_arm_interfaces")

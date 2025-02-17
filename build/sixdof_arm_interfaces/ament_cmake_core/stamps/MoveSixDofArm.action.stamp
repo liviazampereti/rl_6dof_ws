@@ -1,0 +1,12 @@
+# Goal
+string[] joint_names
+float64[] current_position
+float64[] velocities
+float64 duration
+bool reset
+---
+# Result
+bool success
+---
+# Feedback
+float64[] current_position

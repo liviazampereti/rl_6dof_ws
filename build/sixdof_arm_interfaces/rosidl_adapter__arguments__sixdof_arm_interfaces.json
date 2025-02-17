@@ -1,0 +1,7 @@
+{
+  "package_name": "sixdof_arm_interfaces",
+  "non_idl_tuples": [
+    "/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces:srv/ResetArm.srv",
+    "/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces:action/MoveSixDofArm.action"
+  ]
+}

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from sixdof_arm_interfaces/action/MoveSixDofArm.action
+// generated code does not contain a copyright notice
+
+
+module sixdof_arm_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct MoveSixDofArm_Goal {
+      sequence<string> joint_names;
+
+      sequence<double> current_position;
+
+      sequence<double> velocities;
+
+      double duration;
+
+      boolean reset;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct MoveSixDofArm_Result {
+      boolean success;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct MoveSixDofArm_Feedback {
+      sequence<double> current_position;
+    };
+  };
+};

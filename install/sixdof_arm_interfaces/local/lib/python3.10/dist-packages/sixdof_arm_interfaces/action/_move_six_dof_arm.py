@@ -1,0 +1,1 @@
+/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/rosidl_generator_py/sixdof_arm_interfaces/action/_move_six_dof_arm.py

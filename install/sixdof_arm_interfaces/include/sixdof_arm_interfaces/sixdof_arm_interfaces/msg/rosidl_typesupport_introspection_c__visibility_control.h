@@ -1,0 +1,1 @@
+/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/rosidl_typesupport_introspection_c/sixdof_arm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
