@@ -141,4 +141,34 @@
     <xacro:gazebo_material link="gripper1_link" ambient="0.5 0.5 0.5" />
     <xacro:gazebo_material link="gripper2_link" ambient="0.5 0.5 0.5" />
     
+
+    <xacro:macro name="contact_sensor" params="reference">
+        <gazebo reference="${reference}">
+        <sensor name="${reference}_bumper" type="contact">
+            <always_on>true</always_on>
+            <update_rate>50</update_rate>
+            <contact>
+                <collision>${reference}_collision_collision</collision>
+            </contact>
+            <plugin name="${reference}_contact_plugin" filename="libgazebo_ros_bumper.so">
+                <ros>
+                    <remapping>bumper_states:=${reference}_bumper</remapping>
+                </ros>
+                <alwaysOn>true</alwaysOn>
+                <update_rate>50.0</update_rate>
+                <frameName>${reference}</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+    </xacro:macro>
+
+    <xacro:macro name="transmission" params="joint_name">
+        <transmission name="transmission_${joint_name}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="joint_name">
+                <hardwareInterface>velocity</hardwareInterface>
+            </joint>
+        </transmission>
+    </xacro:macro>
+
 </robot>

@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="sixdof_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-
+<!-- =================================================================================== -->
+<!-- |                                    LINKS                                        | -->
+<!-- =================================================================================== -->
 
     <link name="base_link">
         <visual>
@@ -31,7 +33,7 @@
             <material name="salmon"/>
         </visual>
         <xacro:arm1_inertia xyz="0 -0.00016159 0.14671717" rpy="0 0 0" />
-        <collision>
+        <collision name="arm1_link_collision">
             <geometry>
                 <box size="0.15 0.20 0.275" />
             </geometry>
@@ -49,7 +51,7 @@
             <material name="yellow"/>
         </visual>
         <xacro:arm2_inertia xyz="-0.00008884 0 0.47100021" rpy="0 0 -${pi/2.0}" />
-        <collision>
+        <collision name="arm2_link_collision">
             <geometry>
                 <box size="0.15 0.20 1.10" />
             </geometry>
@@ -67,7 +69,7 @@
             <material name="purple"/>
         </visual>
         <xacro:arm3_inertia xyz="0.325 0 -0.00011793" rpy="0 ${pi/2} 0" />
-        <collision>
+        <collision name="arm3_link_collision">
             <geometry>
                 <box size="0.15 0.20 0.80" />
             </geometry>
@@ -85,7 +87,7 @@
             <material name="green"/>
         </visual>
         <xacro:arm4_inertia xyz="0 0.0010614 -0.05328286" rpy="${pi} 0 0" />
-        <collision>
+        <collision name="arm4_link_collision">
             <geometry>
                 <box size="0.15 0.20 0.275" />
             </geometry>
@@ -103,7 +105,7 @@
             <material name="blue"/>
         </visual>
         <xacro:arm5_inertia xyz="-0.0002301 0 -0.08772699" rpy="${pi} 0 ${pi}" />
-        <collision>
+        <collision name="arm5_link_collision">
             <geometry>
                 <box size="0.20 0.15 0.175" />
             </geometry>
@@ -121,7 +123,7 @@
             <material name="blue_tifany"/>
         </visual>
         <xacro:arm6_inertia xyz="0 0 0.10531595" rpy="0 0 0" />
-        <collision>
+        <collision name="arm6_link_collision">
             <geometry>
                 <box size="0.15 0.15 0.20" />
             </geometry>
@@ -138,7 +140,7 @@
             <material name="light_black"/>
         </visual>
         <xacro:gripper_inertia xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0" />
-        <collision>
+        <collision name="gripper1_link_collision">
             <geometry>
                 <box size="0.015 0.16050005 0.07295455" />
             </geometry>
@@ -155,7 +157,7 @@
             <material name="light_black"/>
         </visual>
         <xacro:gripper_inertia xyz="-0.0075 0.090250025 0.027995235" rpy="0 0 0" />
-        <collision>
+        <collision name="gripper2_link_collision">
             <geometry>
                 <box size="0.015 0.16050005 0.07295455" />
             </geometry>
@@ -163,9 +165,12 @@
         </collision>
     </link>
 
-
-
     <link name="world"/>    
+
+<!-- =================================================================================== -->
+<!-- |                                    JOINTS                                       | -->
+<!-- =================================================================================== -->
+
 
     <joint name="world_base_joint" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -178,7 +183,7 @@
         <child link="arm1_link" />
         <origin xyz ="0 0 0.07" rpy="0 0 0" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm1_arm2_joint" type="revolute">  
@@ -186,7 +191,7 @@
         <child link="arm2_link" />
         <origin xyz ="0 -0.20 0.20" rpy="0 0 0" />
         <axis xyz="0 1 0" />
-        <limit lower="0" upper="${pi}" effort="100" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm2_arm3_joint" type="revolute">  
@@ -194,7 +199,7 @@
         <child link="arm3_link" />
         <origin xyz ="0 0.20 0.95" rpy="0 0 0" />
         <axis xyz="0 1 0" />
-        <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm3_arm4_joint" type="revolute">  
@@ -202,7 +207,7 @@
         <child link="arm4_link" />
         <origin xyz ="0.65 -0.20 0" rpy="0 -${pi/2} 0" />
         <axis xyz="0 1 0" />
-        <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm4_arm5_joint" type="revolute">  
@@ -210,7 +215,7 @@
         <child link="arm5_link" />
         <origin xyz ="0 0 -0.20" rpy="0 0 ${pi}" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm5_arm6_joint" type="revolute">  
@@ -218,7 +223,7 @@
         <child link="arm6_link" />
         <origin xyz ="0.10 0 -0.1" rpy="0 ${pi/2} 0" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="${pi}" effort="10" velocity="1.0"/> 
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="10" velocity="1.0"/> 
     </joint>
 
     <joint name="arm6_gripper1_joint" type="revolute">  
@@ -237,61 +242,31 @@
         <limit lower="${pi/2}" upper="${3/4*pi}" effort="10" velocity="1.0"/> 
     </joint>
 
-    <transmission name="transmission_base_arm1">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="base_arm1_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
+<!-- =================================================================================== -->
+<!-- |                               TRANSMISSION                                       | -->
+<!-- =================================================================================== -->
 
-    <transmission name="transmission_arm1_arm2_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm1_arm2_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
+    <xacro:transmission joint_name="base_arm1_joint" />
+    <xacro:transmission joint_name="arm1_arm2_joint" />
+    <xacro:transmission joint_name="arm2_arm3_joint" />
+    <xacro:transmission joint_name="arm3_arm4_joint" />
+    <xacro:transmission joint_name="arm4_arm5_joint" />
+    <xacro:transmission joint_name="arm5_arm6_joint" />
+    <xacro:transmission joint_name="arm6_gripper1_joint" />
+    <xacro:transmission joint_name="arm6_gripper2_joint" />
 
-    <transmission name="transmission_arm2_arm3_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm2_arm3_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
 
-    <transmission name="transmission_arm3_arm4_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm3_arm4_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
+<!-- =================================================================================== -->
+<!-- |                               CONTACT SENSOR                                    | -->
+<!-- =================================================================================== -->
 
-    <transmission name="transmission_arm4_arm5_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm4_arm5_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
-
-    <transmission name="transmission_arm5_arm6_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm5_arm6_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
-
-    <transmission name="transmission_arm6_gripper1_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm6_gripper1_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
-
-    <transmission name="transmission_arm6_gripper2_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="arm6_gripper2_joint">
-            <hardwareInterface>velocity</hardwareInterface>
-        </joint>
-    </transmission>
-
+    <xacro:contact_sensor reference="arm1_link" />
+    <xacro:contact_sensor reference="arm2_link" />
+    <xacro:contact_sensor reference="arm3_link" />
+    <xacro:contact_sensor reference="arm4_link" />
+    <xacro:contact_sensor reference="arm5_link" />
+    <xacro:contact_sensor reference="arm6_link" />
+    <xacro:contact_sensor reference="gripper1_link" />
+    <xacro:contact_sensor reference="gripper2_link" />
 
 </robot>

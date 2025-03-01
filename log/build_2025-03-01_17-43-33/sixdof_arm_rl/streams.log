@@ -1,0 +1,27 @@
+[0.655s] Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_rl': CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_description LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/livia/rl_6dof_ws/build/sixdof_arm_rl/build --no-deps symlink_data
+[0.923s] running develop
+[1.093s] running egg_info
+[1.093s] creating sixdof_arm_rl.egg-info
+[1.094s] writing sixdof_arm_rl.egg-info/PKG-INFO
+[1.094s] writing dependency_links to sixdof_arm_rl.egg-info/dependency_links.txt
+[1.094s] writing entry points to sixdof_arm_rl.egg-info/entry_points.txt
+[1.094s] writing requirements to sixdof_arm_rl.egg-info/requires.txt
+[1.094s] writing top-level names to sixdof_arm_rl.egg-info/top_level.txt
+[1.094s] writing manifest file 'sixdof_arm_rl.egg-info/SOURCES.txt'
+[1.096s] reading manifest file 'sixdof_arm_rl.egg-info/SOURCES.txt'
+[1.096s] writing manifest file 'sixdof_arm_rl.egg-info/SOURCES.txt'
+[1.098s] running build_ext
+[1.098s] Creating /home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages/sixdof-arm-rl.egg-link (link to .)
+[1.099s] Installing arm_control script to /home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/sixdof_arm_rl
+[1.099s] Installing q_learning script to /home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/sixdof_arm_rl
+[1.099s] Installing six_dof_arm_movement_client script to /home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/sixdof_arm_rl
+[1.099s] Installing six_dof_arm_movement_server script to /home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/sixdof_arm_rl
+[1.099s] 
+[1.099s] Installed /home/livia/rl_6dof_ws/build/sixdof_arm_rl
+[1.099s] running symlink_data
+[1.100s] creating /home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/ament_index
+[1.100s] creating /home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/ament_index/resource_index
+[1.100s] creating /home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/ament_index/resource_index/packages
+[1.100s] symbolically linking /home/livia/rl_6dof_ws/build/sixdof_arm_rl/resource/sixdof_arm_rl -> /home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/ament_index/resource_index/packages
+[1.100s] symbolically linking /home/livia/rl_6dof_ws/build/sixdof_arm_rl/package.xml -> /home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl
+[1.126s] Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_rl' returned '0': CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_description LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/livia/rl_6dof_ws/build/sixdof_arm_rl/build --no-deps symlink_data

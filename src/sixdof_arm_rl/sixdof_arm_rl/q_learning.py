@@ -32,8 +32,20 @@ def main(args=None):
                   'arm6_gripper2_joint']    
     
     
-    # Reset robot
-    six_dof_arm_node.send_goal(joint_names, [], [], 2.0, True)
+    # Reset robot.
+    duration=  2.0
+    current_position= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    velocities= [0.08, 0.8, 0.05, 0.05, 0.5, 0.5, 0.00, 0.3]
+    reset = False
+    six_dof_arm_node.send_goal(joint_names, current_position, velocities, duration, reset)
+    
+    time.sleep(4)
+    
+    duration = 5.0
+    current_position= []
+    velocities= []
+    reset = True
+    six_dof_arm_node.send_goal(joint_names, current_position, velocities, duration, reset)
     rclpy.spin(six_dof_arm_node) 
     rclpy.shutdown() #Shutdown the ROS communication
 
