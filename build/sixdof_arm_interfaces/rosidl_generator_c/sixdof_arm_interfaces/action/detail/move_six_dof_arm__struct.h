@@ -75,6 +75,8 @@ typedef struct sixdof_arm_interfaces__action__MoveSixDofArm_Result__Sequence
 typedef struct sixdof_arm_interfaces__action__MoveSixDofArm_Feedback
 {
   rosidl_runtime_c__double__Sequence current_position;
+  int64_t reward;
+  bool done;
 } sixdof_arm_interfaces__action__MoveSixDofArm_Feedback;
 
 // Struct for a sequence of sixdof_arm_interfaces__action__MoveSixDofArm_Feedback.

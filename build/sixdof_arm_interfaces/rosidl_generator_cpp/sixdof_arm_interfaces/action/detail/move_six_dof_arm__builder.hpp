@@ -169,16 +169,48 @@ namespace action
 namespace builder
 {
 
+class Init_MoveSixDofArm_Feedback_done
+{
+public:
+  explicit Init_MoveSixDofArm_Feedback_done(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback & msg)
+  : msg_(msg)
+  {}
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback done(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback::_done_type arg)
+  {
+    msg_.done = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback msg_;
+};
+
+class Init_MoveSixDofArm_Feedback_reward
+{
+public:
+  explicit Init_MoveSixDofArm_Feedback_reward(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback & msg)
+  : msg_(msg)
+  {}
+  Init_MoveSixDofArm_Feedback_done reward(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback::_reward_type arg)
+  {
+    msg_.reward = std::move(arg);
+    return Init_MoveSixDofArm_Feedback_done(msg_);
+  }
+
+private:
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback msg_;
+};
+
 class Init_MoveSixDofArm_Feedback_current_position
 {
 public:
   Init_MoveSixDofArm_Feedback_current_position()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback current_position(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback::_current_position_type arg)
+  Init_MoveSixDofArm_Feedback_reward current_position(::sixdof_arm_interfaces::action::MoveSixDofArm_Feedback::_current_position_type arg)
   {
     msg_.current_position = std::move(arg);
-    return std::move(msg_);
+    return Init_MoveSixDofArm_Feedback_reward(msg_);
   }
 
 private:

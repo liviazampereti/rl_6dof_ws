@@ -650,6 +650,16 @@ static bool _MoveSixDofArm_Feedback__cdr_serialize(
     cdr.serializeArray(array_ptr, size);
   }
 
+  // Field name: reward
+  {
+    cdr << ros_message->reward;
+  }
+
+  // Field name: done
+  {
+    cdr << (ros_message->done ? true : false);
+  }
+
   return true;
 }
 
@@ -678,6 +688,18 @@ static bool _MoveSixDofArm_Feedback__cdr_deserialize(
     cdr.deserializeArray(array_ptr, size);
   }
 
+  // Field name: reward
+  {
+    cdr >> ros_message->reward;
+  }
+
+  // Field name: done
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->done = tmp ? true : false;
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -704,6 +726,18 @@ size_t get_serialized_size_sixdof_arm_interfaces__action__MoveSixDofArm_Feedback
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name reward
+  {
+    size_t item_size = sizeof(ros_message->reward);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name done
+  {
+    size_t item_size = sizeof(ros_message->done);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -747,6 +781,21 @@ size_t max_serialized_size_sixdof_arm_interfaces__action__MoveSixDofArm_Feedback
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
+  // member: reward
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: done
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -756,7 +805,7 @@ size_t max_serialized_size_sixdof_arm_interfaces__action__MoveSixDofArm_Feedback
     using DataType = sixdof_arm_interfaces__action__MoveSixDofArm_Feedback;
     is_plain =
       (
-      offsetof(DataType, current_position) +
+      offsetof(DataType, done) +
       last_member_size
       ) == ret_val;
   }

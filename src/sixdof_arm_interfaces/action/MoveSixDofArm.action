@@ -10,3 +10,5 @@ bool success
 ---
 # Feedback
 float64[] current_position
+int64 reward
+bool done

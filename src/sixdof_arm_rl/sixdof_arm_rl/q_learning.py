@@ -20,7 +20,7 @@ class QLearningNode(Node):
 def main(args=None):
     rclpy.init(args=args) # Initialize ROS communication
     six_dof_arm_node = MoveRobotClientNode()
-    time.sleep(10)
+    time.sleep(5)
     
     joint_names= ['base_arm1_joint', 
                   'arm1_arm2_joint', 
@@ -35,17 +35,22 @@ def main(args=None):
     # Reset robot.
     duration=  2.0
     current_position= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    velocities= [0.08, 0.8, 0.05, 0.05, 0.5, 0.5, 0.00, 0.3]
+    velocities= [-0.15, 0.30, 0.0, -0.3, 0.0, 0.0, 0.0, 0.0]
+    reset = False
+    future = six_dof_arm_node.send_goal(joint_names, current_position, velocities, duration, reset)
+    if future:
+        six_dof_arm_node.get_logger().info(f"ENTROU AQUI")
+        feedback = future.result()  # Aguarda o feedback
+        six_dof_arm_node.get_logger().info(f"PASSOU AQUI")
+        six_dof_arm_node.get_logger().info(f"💜 Final feedback: {feedback} 💜")
+
+    time.sleep(2)
+    duration=  2.0
+    current_position= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    velocities= [-0.15, 0.80, 0.0, -0.3, 0.0, 0.0, 0.0, 0.0]
     reset = False
     six_dof_arm_node.send_goal(joint_names, current_position, velocities, duration, reset)
     
-    time.sleep(4)
-    
-    duration = 5.0
-    current_position= []
-    velocities= []
-    reset = True
-    six_dof_arm_node.send_goal(joint_names, current_position, velocities, duration, reset)
     rclpy.spin(six_dof_arm_node) 
     rclpy.shutdown() #Shutdown the ROS communication
 

@@ -588,6 +588,10 @@ cdr_serialize(
   {
     cdr << ros_message.current_position;
   }
+  // Member: reward
+  cdr << ros_message.reward;
+  // Member: done
+  cdr << (ros_message.done ? true : false);
   return true;
 }
 
@@ -600,6 +604,16 @@ cdr_deserialize(
   // Member: current_position
   {
     cdr >> ros_message.current_position;
+  }
+
+  // Member: reward
+  cdr >> ros_message.reward;
+
+  // Member: done
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.done = tmp ? true : false;
   }
 
   return true;
@@ -626,6 +640,18 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     size_t item_size = sizeof(ros_message.current_position[0]);
     current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: reward
+  {
+    size_t item_size = sizeof(ros_message.reward);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: done
+  {
+    size_t item_size = sizeof(ros_message.done);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -665,6 +691,23 @@ max_serialized_size_MoveSixDofArm_Feedback(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Member: reward
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: done
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -673,7 +716,7 @@ max_serialized_size_MoveSixDofArm_Feedback(
     using DataType = sixdof_arm_interfaces::action::MoveSixDofArm_Feedback;
     is_plain =
       (
-      offsetof(DataType, current_position) +
+      offsetof(DataType, done) +
       last_member_size
       ) == ret_val;
   }

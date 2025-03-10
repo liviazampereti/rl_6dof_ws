@@ -313,25 +313,53 @@ struct MoveSixDofArm_Feedback_
 
   explicit MoveSixDofArm_Feedback_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->reward = 0ll;
+      this->done = false;
+    }
   }
 
   explicit MoveSixDofArm_Feedback_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->reward = 0ll;
+      this->done = false;
+    }
   }
 
   // field types and members
   using _current_position_type =
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _current_position_type current_position;
+  using _reward_type =
+    int64_t;
+  _reward_type reward;
+  using _done_type =
+    bool;
+  _done_type done;
 
   // setters for named parameter idiom
   Type & set__current_position(
     const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->current_position = _arg;
+    return *this;
+  }
+  Type & set__reward(
+    const int64_t & _arg)
+  {
+    this->reward = _arg;
+    return *this;
+  }
+  Type & set__done(
+    const bool & _arg)
+  {
+    this->done = _arg;
     return *this;
   }
 
@@ -378,6 +406,12 @@ struct MoveSixDofArm_Feedback_
   bool operator==(const MoveSixDofArm_Feedback_ & other) const
   {
     if (this->current_position != other.current_position) {
+      return false;
+    }
+    if (this->reward != other.reward) {
+      return false;
+    }
+    if (this->done != other.done) {
       return false;
     }
     return true;

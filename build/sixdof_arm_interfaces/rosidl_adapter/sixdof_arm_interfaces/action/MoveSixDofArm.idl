@@ -27,6 +27,10 @@ module sixdof_arm_interfaces {
       "Feedback")
     struct MoveSixDofArm_Feedback {
       sequence<double> current_position;
+
+      int64 reward;
+
+      boolean done;
     };
   };
 };

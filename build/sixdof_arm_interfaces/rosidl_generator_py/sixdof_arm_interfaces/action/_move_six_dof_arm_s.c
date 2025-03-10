@@ -641,6 +641,24 @@ bool sixdof_arm_interfaces__action__move_six_dof_arm__feedback__convert_from_py(
     }
     Py_DECREF(field);
   }
+  {  // reward
+    PyObject * field = PyObject_GetAttrString(_pymsg, "reward");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->reward = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
+  {  // done
+    PyObject * field = PyObject_GetAttrString(_pymsg, "done");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->done = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -719,6 +737,28 @@ PyObject * sixdof_arm_interfaces__action__move_six_dof_arm__feedback__convert_to
       Py_DECREF(ret);
     }
     Py_DECREF(field);
+  }
+  {  // reward
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->reward);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "reward", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // done
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->done ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "done", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
   }
 
   // ownership of _pymessage is transferred to the caller

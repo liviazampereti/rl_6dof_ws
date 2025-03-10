@@ -1,4 +1,3 @@
-/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/aaaaaaaaa
 /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/lidar_sensor.urdf.xacro
 /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/mobile_base.urdf
 /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/mobile_base.urdf.xacro

@@ -2,6 +2,8 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+
+<!-- ===================================MARTERIALS====================================== -->
     <material name="light_black">
         <color rgba="0.5 0.5 0.5 1.0"/>
     </material>
@@ -32,6 +34,7 @@
 
 
 
+<!-- =====================================XACROS======================================== -->
     <xacro:macro name="base_inertia" params="xyz rpy">
         <inertial>
             <origin xyz="${xyz}" rpy="${rpy}" />
@@ -131,17 +134,6 @@
         </gazebo>
     </xacro:macro>
 
-    <xacro:gazebo_material link="base_link" ambient="0.5 0.5 0.5" />
-    <xacro:gazebo_material link="arm1_link" ambient="0.8754 0.4471 0.3176" />
-    <xacro:gazebo_material link="arm2_link" ambient="1 0.7569 0.0549" />
-    <xacro:gazebo_material link="arm3_link" ambient="0.6824 0.3333 0.7373" />
-    <xacro:gazebo_material link="arm4_link" ambient="0.3725 0.6549 0.2392" />
-    <xacro:gazebo_material link="arm5_link" ambient="0.3686 0.2509 0.6431" />
-    <xacro:gazebo_material link="arm6_link" ambient="0.5372 0.8549 0.8274" />
-    <xacro:gazebo_material link="gripper1_link" ambient="0.5 0.5 0.5" />
-    <xacro:gazebo_material link="gripper2_link" ambient="0.5 0.5 0.5" />
-    
-
     <xacro:macro name="contact_sensor" params="reference">
         <gazebo reference="${reference}">
         <sensor name="${reference}_bumper" type="contact">
@@ -170,5 +162,20 @@
             </joint>
         </transmission>
     </xacro:macro>
+
+<!-- ===============================MATERIAL DEFINITIONS================================ -->
+
+    <xacro:gazebo_material link="base_link" ambient="0.5 0.5 0.5" />
+    <xacro:gazebo_material link="arm1_link" ambient="0.8754 0.4471 0.3176" />
+    <xacro:gazebo_material link="arm2_link" ambient="1 0.7569 0.0549" />
+    <xacro:gazebo_material link="arm3_link" ambient="0.6824 0.3333 0.7373" />
+    <xacro:gazebo_material link="arm4_link" ambient="0.3725 0.6549 0.2392" />
+    <xacro:gazebo_material link="arm5_link" ambient="0.3686 0.2509 0.6431" />
+    <xacro:gazebo_material link="arm6_link" ambient="0.5372 0.8549 0.8274" />
+    <xacro:gazebo_material link="gripper1_link" ambient="0.5 0.5 0.5" />
+    <xacro:gazebo_material link="gripper2_link" ambient="0.5 0.5 0.5" />
+    
+
+
 
 </robot>

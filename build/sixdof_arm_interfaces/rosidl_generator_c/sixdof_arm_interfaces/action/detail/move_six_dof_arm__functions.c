@@ -549,6 +549,8 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Feedback__init(sixdof_arm_interface
     sixdof_arm_interfaces__action__MoveSixDofArm_Feedback__fini(msg);
     return false;
   }
+  // reward
+  // done
   return true;
 }
 
@@ -560,6 +562,8 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Feedback__fini(sixdof_arm_interface
   }
   // current_position
   rosidl_runtime_c__double__Sequence__fini(&msg->current_position);
+  // reward
+  // done
 }
 
 bool
@@ -572,6 +576,14 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Feedback__are_equal(const sixdof_ar
   if (!rosidl_runtime_c__double__Sequence__are_equal(
       &(lhs->current_position), &(rhs->current_position)))
   {
+    return false;
+  }
+  // reward
+  if (lhs->reward != rhs->reward) {
+    return false;
+  }
+  // done
+  if (lhs->done != rhs->done) {
     return false;
   }
   return true;
@@ -591,6 +603,10 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Feedback__copy(
   {
     return false;
   }
+  // reward
+  output->reward = input->reward;
+  // done
+  output->done = input->done;
   return true;
 }
 
