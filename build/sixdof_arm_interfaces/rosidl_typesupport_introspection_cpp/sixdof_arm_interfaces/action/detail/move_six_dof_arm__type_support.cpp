@@ -359,7 +359,103 @@ void MoveSixDofArm_Result_fini_function(void * message_memory)
   typed_message->~MoveSixDofArm_Result();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveSixDofArm_Result_message_member_array[1] = {
+size_t size_function__MoveSixDofArm_Result__current_position(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__MoveSixDofArm_Result__current_position(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__MoveSixDofArm_Result__current_position(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<double> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__MoveSixDofArm_Result__current_position(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__MoveSixDofArm_Result__current_position(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__MoveSixDofArm_Result__current_position(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__MoveSixDofArm_Result__current_position(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+void resize_function__MoveSixDofArm_Result__current_position(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<double> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveSixDofArm_Result_message_member_array[4] = {
+  {
+    "current_position",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces::action::MoveSixDofArm_Result, current_position),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__MoveSixDofArm_Result__current_position,  // size() function pointer
+    get_const_function__MoveSixDofArm_Result__current_position,  // get_const(index) function pointer
+    get_function__MoveSixDofArm_Result__current_position,  // get(index) function pointer
+    fetch_function__MoveSixDofArm_Result__current_position,  // fetch(index, &value) function pointer
+    assign_function__MoveSixDofArm_Result__current_position,  // assign(index, value) function pointer
+    resize_function__MoveSixDofArm_Result__current_position  // resize(index) function pointer
+  },
+  {
+    "reward",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces::action::MoveSixDofArm_Result, reward),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "done",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces::action::MoveSixDofArm_Result, done),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "success",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -382,7 +478,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveSixDofArm
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveSixDofArm_Result_message_members = {
   "sixdof_arm_interfaces::action",  // message namespace
   "MoveSixDofArm_Result",  // message name
-  1,  // number of fields
+  4,  // number of fields
   sizeof(sixdof_arm_interfaces::action::MoveSixDofArm_Result),
   MoveSixDofArm_Result_message_member_array,  // message members
   MoveSixDofArm_Result_init_function,  // function to initialize message memory (memory has to be allocated)

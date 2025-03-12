@@ -428,6 +428,10 @@ extern "C"
 {
 #endif
 
+// already included above
+// #include "rosidl_runtime_c/primitives_sequence.h"  // current_position
+// already included above
+// #include "rosidl_runtime_c/primitives_sequence_functions.h"  // current_position
 
 // forward declare type support functions
 
@@ -443,6 +447,24 @@ static bool _MoveSixDofArm_Result__cdr_serialize(
     return false;
   }
   const _MoveSixDofArm_Result__ros_msg_type * ros_message = static_cast<const _MoveSixDofArm_Result__ros_msg_type *>(untyped_ros_message);
+  // Field name: current_position
+  {
+    size_t size = ros_message->current_position.size;
+    auto array_ptr = ros_message->current_position.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: reward
+  {
+    cdr << ros_message->reward;
+  }
+
+  // Field name: done
+  {
+    cdr << (ros_message->done ? true : false);
+  }
+
   // Field name: success
   {
     cdr << (ros_message->success ? true : false);
@@ -460,6 +482,34 @@ static bool _MoveSixDofArm_Result__cdr_deserialize(
     return false;
   }
   _MoveSixDofArm_Result__ros_msg_type * ros_message = static_cast<_MoveSixDofArm_Result__ros_msg_type *>(untyped_ros_message);
+  // Field name: current_position
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->current_position.data) {
+      rosidl_runtime_c__double__Sequence__fini(&ros_message->current_position);
+    }
+    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->current_position, size)) {
+      fprintf(stderr, "failed to create array for field 'current_position'");
+      return false;
+    }
+    auto array_ptr = ros_message->current_position.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: reward
+  {
+    cdr >> ros_message->reward;
+  }
+
+  // Field name: done
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->done = tmp ? true : false;
+  }
+
   // Field name: success
   {
     uint8_t tmp;
@@ -484,6 +534,29 @@ size_t get_serialized_size_sixdof_arm_interfaces__action__MoveSixDofArm_Result(
   (void)padding;
   (void)wchar_size;
 
+  // field.name current_position
+  {
+    size_t array_size = ros_message->current_position.size;
+    auto array_ptr = ros_message->current_position.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name reward
+  {
+    size_t item_size = sizeof(ros_message->reward);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name done
+  {
+    size_t item_size = sizeof(ros_message->done);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name success
   {
     size_t item_size = sizeof(ros_message->success);
@@ -519,6 +592,33 @@ size_t max_serialized_size_sixdof_arm_interfaces__action__MoveSixDofArm_Result(
   full_bounded = true;
   is_plain = true;
 
+  // member: current_position
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: reward
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: done
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
   // member: success
   {
     size_t array_size = 1;

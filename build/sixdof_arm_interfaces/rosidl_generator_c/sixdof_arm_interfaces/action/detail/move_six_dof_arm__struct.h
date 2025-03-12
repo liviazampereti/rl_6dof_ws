@@ -47,9 +47,17 @@ typedef struct sixdof_arm_interfaces__action__MoveSixDofArm_Goal__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'current_position'
+// already included above
+// #include "rosidl_runtime_c/primitives_sequence.h"
+
 /// Struct defined in action/MoveSixDofArm in the package sixdof_arm_interfaces.
 typedef struct sixdof_arm_interfaces__action__MoveSixDofArm_Result
 {
+  rosidl_runtime_c__double__Sequence current_position;
+  int64_t reward;
+  bool done;
   bool success;
 } sixdof_arm_interfaces__action__MoveSixDofArm_Result;
 

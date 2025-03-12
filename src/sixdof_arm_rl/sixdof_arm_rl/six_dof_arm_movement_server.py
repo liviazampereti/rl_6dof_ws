@@ -140,7 +140,6 @@ class MoveRobotServerNode(Node):
                 self.get_logger().info("🟦Houve colisão de um dos links com o solo. Finalização do episódio.🟦")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
-        
         if done:
             feedback = MoveSixDofArm.Feedback()
             feedback.current_position = point.positions
@@ -149,8 +148,7 @@ class MoveRobotServerNode(Node):
             goal_handle.publish_feedback(feedback)
 
             self.get_logger().info("⚠️ Feedback enviado antes do reset ⚠️")
-            #self.reset_robot(joint_names)
-        
+            self.reset_robot(joint_names)
         
         return point.positions, reward, done
 
@@ -174,6 +172,7 @@ class MoveRobotServerNode(Node):
     
     def execute_callback(self, goal_handle: ServerGoalHandle):
         """ Executa o movimento do robô e verifica colisões durante a movimentação """
+        self.get_logger().info(f"🚀 Callback executado para novo goal! ID: {id(goal_handle)}")
         joint_names = goal_handle.request.joint_names
         current_position = goal_handle.request.current_position
         velocities = goal_handle.request.velocities
@@ -195,6 +194,9 @@ class MoveRobotServerNode(Node):
         current_position, reward, done = self.move_robot(point, msg, joint_names, current_position, velocities, duration, reset, goal_handle)
 
         result.success = not done  # Se houve colisão, a movimentação não foi bem-sucedida
+        result.current_position = current_position
+        result.reward = reward
+        result.done = done
         goal_handle.succeed()
         
         return result

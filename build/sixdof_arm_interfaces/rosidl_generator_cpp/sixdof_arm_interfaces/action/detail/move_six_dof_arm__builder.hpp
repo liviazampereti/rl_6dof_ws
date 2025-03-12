@@ -130,13 +130,61 @@ namespace builder
 class Init_MoveSixDofArm_Result_success
 {
 public:
-  Init_MoveSixDofArm_Result_success()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_MoveSixDofArm_Result_success(::sixdof_arm_interfaces::action::MoveSixDofArm_Result & msg)
+  : msg_(msg)
   {}
   ::sixdof_arm_interfaces::action::MoveSixDofArm_Result success(::sixdof_arm_interfaces::action::MoveSixDofArm_Result::_success_type arg)
   {
     msg_.success = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Result msg_;
+};
+
+class Init_MoveSixDofArm_Result_done
+{
+public:
+  explicit Init_MoveSixDofArm_Result_done(::sixdof_arm_interfaces::action::MoveSixDofArm_Result & msg)
+  : msg_(msg)
+  {}
+  Init_MoveSixDofArm_Result_success done(::sixdof_arm_interfaces::action::MoveSixDofArm_Result::_done_type arg)
+  {
+    msg_.done = std::move(arg);
+    return Init_MoveSixDofArm_Result_success(msg_);
+  }
+
+private:
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Result msg_;
+};
+
+class Init_MoveSixDofArm_Result_reward
+{
+public:
+  explicit Init_MoveSixDofArm_Result_reward(::sixdof_arm_interfaces::action::MoveSixDofArm_Result & msg)
+  : msg_(msg)
+  {}
+  Init_MoveSixDofArm_Result_done reward(::sixdof_arm_interfaces::action::MoveSixDofArm_Result::_reward_type arg)
+  {
+    msg_.reward = std::move(arg);
+    return Init_MoveSixDofArm_Result_done(msg_);
+  }
+
+private:
+  ::sixdof_arm_interfaces::action::MoveSixDofArm_Result msg_;
+};
+
+class Init_MoveSixDofArm_Result_current_position
+{
+public:
+  Init_MoveSixDofArm_Result_current_position()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_MoveSixDofArm_Result_reward current_position(::sixdof_arm_interfaces::action::MoveSixDofArm_Result::_current_position_type arg)
+  {
+    msg_.current_position = std::move(arg);
+    return Init_MoveSixDofArm_Result_reward(msg_);
   }
 
 private:
@@ -154,7 +202,7 @@ template<>
 inline
 auto build<::sixdof_arm_interfaces::action::MoveSixDofArm_Result>()
 {
-  return sixdof_arm_interfaces::action::builder::Init_MoveSixDofArm_Result_success();
+  return sixdof_arm_interfaces::action::builder::Init_MoveSixDofArm_Result_current_position();
 }
 
 }  // namespace sixdof_arm_interfaces

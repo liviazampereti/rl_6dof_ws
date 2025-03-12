@@ -340,6 +340,11 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "sixdof_arm_interfaces/action/detail/move_six_dof_arm__struct.h"
 
 
+// Include directives for member types
+// Member `current_position`
+// already included above
+// #include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -359,7 +364,113 @@ void sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_int
   sixdof_arm_interfaces__action__MoveSixDofArm_Result__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__MoveSixDofArm_Result_message_member_array[1] = {
+size_t sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__size_function__MoveSixDofArm_Result__current_position(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_const_function__MoveSixDofArm_Result__current_position(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_function__MoveSixDofArm_Result__current_position(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__fetch_function__MoveSixDofArm_Result__current_position(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_const_function__MoveSixDofArm_Result__current_position(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__assign_function__MoveSixDofArm_Result__current_position(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_function__MoveSixDofArm_Result__current_position(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__resize_function__MoveSixDofArm_Result__current_position(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__MoveSixDofArm_Result_message_member_array[4] = {
+  {
+    "current_position",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces__action__MoveSixDofArm_Result, current_position),  // bytes offset in struct
+    NULL,  // default value
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__size_function__MoveSixDofArm_Result__current_position,  // size() function pointer
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_const_function__MoveSixDofArm_Result__current_position,  // get_const(index) function pointer
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__get_function__MoveSixDofArm_Result__current_position,  // get(index) function pointer
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__fetch_function__MoveSixDofArm_Result__current_position,  // fetch(index, &value) function pointer
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__assign_function__MoveSixDofArm_Result__current_position,  // assign(index, value) function pointer
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__resize_function__MoveSixDofArm_Result__current_position  // resize(index) function pointer
+  },
+  {
+    "reward",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces__action__MoveSixDofArm_Result, reward),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "done",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(sixdof_arm_interfaces__action__MoveSixDofArm_Result, done),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "success",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -382,7 +493,7 @@ static rosidl_typesupport_introspection_c__MessageMember sixdof_arm_interfaces__
 static const rosidl_typesupport_introspection_c__MessageMembers sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__MoveSixDofArm_Result_message_members = {
   "sixdof_arm_interfaces__action",  // message namespace
   "MoveSixDofArm_Result",  // message name
-  1,  // number of fields
+  4,  // number of fields
   sizeof(sixdof_arm_interfaces__action__MoveSixDofArm_Result),
   sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__MoveSixDofArm_Result_message_member_array,  // message members
   sixdof_arm_interfaces__action__MoveSixDofArm_Result__rosidl_typesupport_introspection_c__MoveSixDofArm_Result_init_function,  // function to initialize message memory (memory has to be allocated)

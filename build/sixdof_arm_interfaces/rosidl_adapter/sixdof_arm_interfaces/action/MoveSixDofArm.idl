@@ -21,6 +21,12 @@ module sixdof_arm_interfaces {
     @verbatim (language="comment", text=
       "Result")
     struct MoveSixDofArm_Result {
+      sequence<double> current_position;
+
+      int64 reward;
+
+      boolean done;
+
       boolean success;
     };
     @verbatim (language="comment", text=

@@ -41,9 +41,25 @@ class MoveRobotClientNode(Node):
         # Enviar o goal de forma assíncrona
         future = self.move_robot_client_.send_goal_async(
             goal, feedback_callback=self.goal_feedback_callback
-        ).add_done_callback(self.goal_response_callback)
+        )
+        rclpy.spin_until_future_complete(self, future)
 
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Objetivo rejeitado')
+            return
 
+        result_future = goal_handle.get_result_async()
+        rclpy.spin_until_future_complete(self, result_future)
+
+        self.get_logger().info(f'Reward: {result_future.result().result.reward} | Done: {result_future.result().result.done}')
+
+        reward = result_future.result().result.reward
+        next_position = result_future.result().result.current_position
+        done = result_future.result().result.done
+     
+        return next_position, reward, done
+    
     def cancel_goal(self):
         self.get_logger().info("Send a cancel request")
         self.goal_handle_.cancel_goal_async()
@@ -81,7 +97,7 @@ class MoveRobotClientNode(Node):
 
 
 
-def main(args=None):
+'''def main(args=None):
     rclpy.init(args=args)  # Inicializa ROS
     node = MoveRobotClientNode()
     time.sleep(2)
@@ -125,4 +141,4 @@ def main(args=None):
 
 
 if __name__ == "__main__":
-    main()
+    main()'''

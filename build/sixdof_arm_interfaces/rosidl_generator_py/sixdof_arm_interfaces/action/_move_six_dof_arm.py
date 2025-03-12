@@ -250,8 +250,15 @@ class MoveSixDofArm_Goal(metaclass=Metaclass_MoveSixDofArm_Goal):
 
 # Import statements for member types
 
+# Member 'current_position'
+# already imported above
+# import array
+
 # already imported above
 # import builtins
+
+# already imported above
+# import math
 
 # already imported above
 # import rosidl_parser.definition
@@ -302,14 +309,23 @@ class MoveSixDofArm_Result(metaclass=Metaclass_MoveSixDofArm_Result):
     """Message class 'MoveSixDofArm_Result'."""
 
     __slots__ = [
+        '_current_position',
+        '_reward',
+        '_done',
         '_success',
     ]
 
     _fields_and_field_types = {
+        'current_position': 'sequence<double>',
+        'reward': 'int64',
+        'done': 'boolean',
         'success': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
@@ -317,6 +333,9 @@ class MoveSixDofArm_Result(metaclass=Metaclass_MoveSixDofArm_Result):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.current_position = array.array('d', kwargs.get('current_position', []))
+        self.reward = kwargs.get('reward', int())
+        self.done = kwargs.get('done', bool())
         self.success = kwargs.get('success', bool())
 
     def __repr__(self):
@@ -348,6 +367,12 @@ class MoveSixDofArm_Result(metaclass=Metaclass_MoveSixDofArm_Result):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.current_position != other.current_position:
+            return False
+        if self.reward != other.reward:
+            return False
+        if self.done != other.done:
+            return False
         if self.success != other.success:
             return False
         return True
@@ -356,6 +381,62 @@ class MoveSixDofArm_Result(metaclass=Metaclass_MoveSixDofArm_Result):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def current_position(self):
+        """Message field 'current_position'."""
+        return self._current_position
+
+    @current_position.setter
+    def current_position(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'd', \
+                "The 'current_position' array.array() must have the type code of 'd'"
+            self._current_position = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'current_position' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._current_position = array.array('d', value)
+
+    @builtins.property
+    def reward(self):
+        """Message field 'reward'."""
+        return self._reward
+
+    @reward.setter
+    def reward(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'reward' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'reward' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._reward = value
+
+    @builtins.property
+    def done(self):
+        """Message field 'done'."""
+        return self._done
+
+    @done.setter
+    def done(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'done' field must be of type 'bool'"
+        self._done = value
 
     @builtins.property
     def success(self):

@@ -308,12 +308,24 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Goal__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `current_position`
+// already included above
+// #include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 sixdof_arm_interfaces__action__MoveSixDofArm_Result__init(sixdof_arm_interfaces__action__MoveSixDofArm_Result * msg)
 {
   if (!msg) {
     return false;
   }
+  // current_position
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->current_position, 0)) {
+    sixdof_arm_interfaces__action__MoveSixDofArm_Result__fini(msg);
+    return false;
+  }
+  // reward
+  // done
   // success
   return true;
 }
@@ -324,6 +336,10 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Result__fini(sixdof_arm_interfaces_
   if (!msg) {
     return;
   }
+  // current_position
+  rosidl_runtime_c__double__Sequence__fini(&msg->current_position);
+  // reward
+  // done
   // success
 }
 
@@ -331,6 +347,20 @@ bool
 sixdof_arm_interfaces__action__MoveSixDofArm_Result__are_equal(const sixdof_arm_interfaces__action__MoveSixDofArm_Result * lhs, const sixdof_arm_interfaces__action__MoveSixDofArm_Result * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // current_position
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
+      &(lhs->current_position), &(rhs->current_position)))
+  {
+    return false;
+  }
+  // reward
+  if (lhs->reward != rhs->reward) {
+    return false;
+  }
+  // done
+  if (lhs->done != rhs->done) {
     return false;
   }
   // success
@@ -348,6 +378,16 @@ sixdof_arm_interfaces__action__MoveSixDofArm_Result__copy(
   if (!input || !output) {
     return false;
   }
+  // current_position
+  if (!rosidl_runtime_c__double__Sequence__copy(
+      &(input->current_position), &(output->current_position)))
+  {
+    return false;
+  }
+  // reward
+  output->reward = input->reward;
+  // done
+  output->done = input->done;
   // success
   output->success = input->success;
   return true;

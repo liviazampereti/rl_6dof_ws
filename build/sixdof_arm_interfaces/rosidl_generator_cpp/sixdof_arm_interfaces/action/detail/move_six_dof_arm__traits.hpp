@@ -248,6 +248,38 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: current_position
+  {
+    if (msg.current_position.size() == 0) {
+      out << "current_position: []";
+    } else {
+      out << "current_position: [";
+      size_t pending_items = msg.current_position.size();
+      for (auto item : msg.current_position) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: reward
+  {
+    out << "reward: ";
+    rosidl_generator_traits::value_to_yaml(msg.reward, out);
+    out << ", ";
+  }
+
+  // member: done
+  {
+    out << "done: ";
+    rosidl_generator_traits::value_to_yaml(msg.done, out);
+    out << ", ";
+  }
+
   // member: success
   {
     out << "success: ";
@@ -260,6 +292,46 @@ inline void to_block_style_yaml(
   const MoveSixDofArm_Result & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: current_position
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.current_position.size() == 0) {
+      out << "current_position: []\n";
+    } else {
+      out << "current_position:\n";
+      for (auto item : msg.current_position) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: reward
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "reward: ";
+    rosidl_generator_traits::value_to_yaml(msg.reward, out);
+    out << "\n";
+  }
+
+  // member: done
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "done: ";
+    rosidl_generator_traits::value_to_yaml(msg.done, out);
+    out << "\n";
+  }
+
   // member: success
   {
     if (indentation > 0) {
@@ -317,11 +389,11 @@ inline const char * name<sixdof_arm_interfaces::action::MoveSixDofArm_Result>()
 
 template<>
 struct has_fixed_size<sixdof_arm_interfaces::action::MoveSixDofArm_Result>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<sixdof_arm_interfaces::action::MoveSixDofArm_Result>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<sixdof_arm_interfaces::action::MoveSixDofArm_Result>
