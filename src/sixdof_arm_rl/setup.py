@@ -23,7 +23,9 @@ setup(
             "arm_control = sixdof_arm_rl.arm_control:main",
             "six_dof_arm_movement_server = sixdof_arm_rl.six_dof_arm_movement_server:main",
             "six_dof_arm_movement_client = sixdof_arm_rl.six_dof_arm_movement_client:main",
-            "q_learning = sixdof_arm_rl.q_learning:main"
+            "six_dof_arm_reset_server = sixdof_arm_rl.six_dof_arm_reset_server:main",
+            "six_dof_arm_reset_client = sixdof_arm_rl.six_dof_arm_reset_client:main",
+            "q_learning = sixdof_arm_rl.q_learning:main"            
         ],
     },
 )

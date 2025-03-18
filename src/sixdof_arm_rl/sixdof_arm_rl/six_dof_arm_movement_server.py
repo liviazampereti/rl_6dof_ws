@@ -16,7 +16,7 @@ from functools import partial
 
 class MoveRobotServerNode(Node):
     def __init__(self):
-        super().__init__("move_robot_server_server")
+        super().__init__("move_robot_server")
         self.move_robot_server_ = ActionServer(
             self, 
             MoveSixDofArm, 
@@ -25,6 +25,7 @@ class MoveRobotServerNode(Node):
             execute_callback=self.execute_callback,
             callback_group=ReentrantCallbackGroup())
         self.get_logger().info("Action server has been started.")
+        
         
         self.publisher = self.create_publisher(JointTrajectory, 
                                                '/joint_trajectory_controller/joint_trajectory', 
@@ -109,7 +110,7 @@ class MoveRobotServerNode(Node):
     def move_robot(self, point, msg, joint_names, current_position, velocities, duration, reset, goal_handle):
         """ Move o robô e monitora colisões em paralelo """
         done = False
-        reward = 0
+        reward = -1
 
         if reset:
             point.positions = list(np.zeros(len(joint_names)))
@@ -140,18 +141,27 @@ class MoveRobotServerNode(Node):
                 self.get_logger().info("🟦Houve colisão de um dos links com o solo. Finalização do episódio.🟦")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
-        if done:
+        '''if done:
             feedback = MoveSixDofArm.Feedback()
             feedback.current_position = point.positions
             feedback.reward = reward
             feedback.done = done
             goal_handle.publish_feedback(feedback)
 
-            self.get_logger().info("⚠️ Feedback enviado antes do reset ⚠️")
-            self.reset_robot(joint_names)
+            self.get_logger().info("⚠️ Feedback enviado antes do reset ⚠️")'''
+            #self.reset_robot(joint_names)
         
         return point.positions, reward, done
 
+    def reset_robot_callback(self, request, response):
+        try:
+            self.reset_robot()  # Chama a função que já existe no código
+            response.success = True
+            response.message = "Robô resetado com sucesso!"
+        except Exception as e:
+            response.success = False
+            response.message = f"Erro ao resetar: {str(e)}"
+        return response
     def reset_robot(self, joint_names):
         """ Move o robô para a posição inicial imediatamente após uma colisão """
         reset_position = [0.0] * len(joint_names)  # Garante que todas as juntas recebem posição zero
@@ -219,8 +229,9 @@ class MoveRobotServerNode(Node):
         time.sleep(1)
         self.move_robot(point, msg, joint_names, current_position, velocities, 0.2, reset=True, goal_handle=goal_handle)
 
-        return CancelResponse.ACCEPT  
-        
+        return CancelResponse.ACCEPT
+
+       
 def main(args=None):
     rclpy.init(args=args)
     node = MoveRobotServerNode()

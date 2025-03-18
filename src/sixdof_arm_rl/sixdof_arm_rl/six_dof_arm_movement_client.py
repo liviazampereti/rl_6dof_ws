@@ -6,7 +6,7 @@ from rclpy.action.client import ClientGoalHandle, GoalStatus
 from sixdof_arm_interfaces.action import MoveSixDofArm
 import time
 from concurrent.futures import Future
-
+from std_srvs.srv import Trigger  
 
 class MoveRobotClientNode(Node):
     def __init__(self):
@@ -54,11 +54,7 @@ class MoveRobotClientNode(Node):
 
         self.get_logger().info(f'Reward: {result_future.result().result.reward} | Done: {result_future.result().result.done}')
 
-        reward = result_future.result().result.reward
-        next_position = result_future.result().result.current_position
-        done = result_future.result().result.done
-     
-        return next_position, reward, done
+        return result_future
     
     def cancel_goal(self):
         self.get_logger().info("Send a cancel request")
@@ -95,50 +91,23 @@ class MoveRobotClientNode(Node):
 
         self.get_logger().info(f"💛 Feedback received - Position: {current_position}, Reward: {reward}, Done: {done} 💛")
 
+class ResetClientNode(Node):
+    def __init__(self):
+        super().__init__("reset_client")
+        self.client = self.create_client(Trigger, "reset_robot")
 
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().warn("Aguardando serviço de reset...")
 
-'''def main(args=None):
-    rclpy.init(args=args)  # Inicializa ROS
-    node = MoveRobotClientNode()
-    time.sleep(2)
+    def send_request(self):
+        req = Trigger.Request()
+        future = self.client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        return future
+    
+def main():
+    print("Six DOF Arm Movement Client Started")
+    # Código principal do cliente aqui
 
-    duration = 2.0
-    joint_names = [
-        "base_arm1_joint",
-        "arm1_arm2_joint",
-        "arm2_arm3_joint",
-        "arm3_arm4_joint",
-        "arm4_arm5_joint",
-        "arm5_arm6_joint",
-        "arm6_gripper1_joint",
-        "arm6_gripper2_joint",
-    ]
-
-    current_position = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    velocities = [0.08, 0.05, 0.05, 0.05, 0.5, 0.5, 0.00, 0.3]
-    reset = False
-
-    future = node.send_goal(joint_names, current_position, velocities, duration, reset)
-
-    if future:
-        feedback = future.result()  # Aguarda o feedback
-        node.get_logger().info(f"💜Final feedback: {feedback}💜")
-
-    time.sleep(2)
-
-    current_position = []
-    velocities = []
-    reset = True
-
-    future = node.send_goal(joint_names, current_position, velocities, duration, reset)
-
-    if future:
-        feedback = future.result()
-        node.get_logger().info(f"Final feedback after reset: {feedback}")
-
-    rclpy.spin(node)
-    rclpy.shutdown()  # Finaliza ROS
-
-
-if __name__ == "__main__":
-    main()'''
+if __name__ == '__main__':
+    main()

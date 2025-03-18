@@ -32,6 +32,8 @@
 
     <node pkg="sixdof_arm_rl" exec="six_dof_arm_movement_server"/>
     <node pkg="sixdof_arm_rl" exec="six_dof_arm_movement_client"/>
+    <node pkg="sixdof_arm_rl" exec="six_dof_arm_reset_server"/>
+
     
     <node pkg="sixdof_arm_rl" exec="q_learning"/>
 
