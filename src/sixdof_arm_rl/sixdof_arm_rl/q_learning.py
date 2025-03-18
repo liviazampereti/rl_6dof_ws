@@ -15,8 +15,12 @@ class QLearningNode(Node):
         self.velocities = [-1.0, -0.5, 0.0, 0.5, 1.0]
         self.action_values = np.zeros((18,5,8))
         
-    def target_policy(self):
-        pass
+    def target_policy(self, state_idx, epsilon=0.1):
+        if np.random.rand() < epsilon:
+            return random.choices(self.velocities, k=8)
+        else:
+            self.get_logger().info(f"ACTION_VALUES[STATE_IDX]: {self.action_values[state_idx]}")
+            return np.argmax(self.action_values[:][state_idx], axis=0)
         
     def exploratory_policy(self):
         return random.choices(self.velocities, k=8)
@@ -67,8 +71,8 @@ class QLearningNode(Node):
             state = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
             
             done = False
-            self.get_logger().info("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
-            self.get_logger().info(f"⚠️ Episódio {episode} - Estado inicial: {state}, Done inicial: {done}")
+
+            self.get_logger().info(f"⚠️ Episódio {episode} - Estado inicial: {state}, Done inicial: {done} ⚠️")
 
             while not done:
                 action = exploratory_policy()
@@ -84,7 +88,11 @@ class QLearningNode(Node):
                 next_state_idx = self.get_indices(next_state)
                 state_idx = self.get_indices(state)         
                 
-                next_action = exploratory_policy()
+                next_action = target_policy(state_idx)
+                self.get_logger().info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+                self.get_logger().info(f"State Indice: {state_idx}")
+                self.get_logger().info(f"Next Action: {next_action}")
+                #next_action = exploratory_policy()
 
                 
                 next_action_idx = self.get_velocity_indices(next_action, self.velocities)
