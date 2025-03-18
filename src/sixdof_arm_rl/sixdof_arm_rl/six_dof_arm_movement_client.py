@@ -22,7 +22,7 @@ class MoveRobotClientNode(Node):
                   'arm6_gripper2_joint'] 
         
     def send_goal(self, joint_names, current_position, velocities, duration, reset):
-        self.get_logger().info("Sending goal")
+
 
         # Espera pelo servidor de ação estar disponível
         if not self.move_robot_client_.wait_for_server(timeout_sec=5.0):

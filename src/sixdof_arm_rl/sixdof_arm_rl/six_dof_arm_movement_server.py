@@ -111,15 +111,20 @@ class MoveRobotServerNode(Node):
         """ Move o robô e monitora colisões em paralelo """
         done = False
         reward = -1
+        
+        self.collision_detected = threading.Event()
+        self.gripper1_collision = False  # Estado de colisão do gripper1
+        self.gripper2_collision = False  # Estado de colisão do gripper2
+        self.ground_collision = False    # Estado de colisão com o solo
 
         if reset:
             point.positions = list(np.zeros(len(joint_names)))
             point.velocities = []
-            self.get_logger().info('Enviando comando de reset')
+            #self.get_logger().info('Enviando comando de reset')
         else:
             point.positions = list(map(self.calculate_next_position, current_position, velocities, [duration] * len(current_position)))
             point.velocities = velocities
-            self.get_logger().info('Enviando comando de movimentação')
+            #self.get_logger().info('Enviando comando de movimentação')
         
         point.time_from_start = Duration(sec=int(duration), nanosec=0)
         msg.points.append(point)
@@ -182,7 +187,7 @@ class MoveRobotServerNode(Node):
     
     def execute_callback(self, goal_handle: ServerGoalHandle):
         """ Executa o movimento do robô e verifica colisões durante a movimentação """
-        self.get_logger().info(f"🚀 Callback executado para novo goal! ID: {id(goal_handle)}")
+
         joint_names = goal_handle.request.joint_names
         current_position = goal_handle.request.current_position
         velocities = goal_handle.request.velocities
