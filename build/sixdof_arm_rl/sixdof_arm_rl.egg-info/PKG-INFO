@@ -1,13 +1,12 @@
-Metadata-Version: 2.2
-Name: sixdof_arm_rl
+Metadata-Version: 2.1
+Name: sixdof-arm-rl
 Version: 0.0.0
 Summary: TODO: Package description
+Home-page: UNKNOWN
 Maintainer: livia
 Maintainer-email: livia.zampereti@hotmail.com
 License: TODO: License declaration
-Requires-Dist: setuptools
-Dynamic: license
-Dynamic: maintainer
-Dynamic: maintainer-email
-Dynamic: requires-dist
-Dynamic: summary
+Platform: UNKNOWN
+
+UNKNOWN
+

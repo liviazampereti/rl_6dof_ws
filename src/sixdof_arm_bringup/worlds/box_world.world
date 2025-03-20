@@ -91,7 +91,7 @@
     </spherical_coordinates>
     <model name='unit_box'>
       <static>1</static>
-      <pose>1.36577 -0.717868 0.5 0 -0 0</pose>
+      <pose>1.36577 -0.717868 0.15 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -108,7 +108,7 @@
         <collision name='box_collision'>
           <geometry>
             <box>
-              <size>1 1 1</size>
+              <size>3 3 3</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -128,7 +128,7 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>1 1 1</size>
+              <size>3 3 3</size>
             </box>
           </geometry>
           <material>

@@ -1,4 +1,4 @@
-#!/home/livia/anaconda3/envs/rl_sixdof_env/bin/python
+#!/usr/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'sixdof-arm-rl','console_scripts','q_learning'
 import re
 import sys

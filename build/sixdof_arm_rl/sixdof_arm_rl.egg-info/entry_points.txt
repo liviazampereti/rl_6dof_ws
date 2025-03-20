@@ -5,3 +5,4 @@ six_dof_arm_movement_client = sixdof_arm_rl.six_dof_arm_movement_client:main
 six_dof_arm_movement_server = sixdof_arm_rl.six_dof_arm_movement_server:main
 six_dof_arm_reset_client = sixdof_arm_rl.six_dof_arm_reset_client:main
 six_dof_arm_reset_server = sixdof_arm_rl.six_dof_arm_reset_server:main
+

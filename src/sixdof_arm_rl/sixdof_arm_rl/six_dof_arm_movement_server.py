@@ -122,7 +122,7 @@ class MoveRobotServerNode(Node):
             point.velocities = []
             #self.get_logger().info('Enviando comando de reset')
         else:
-            point.positions = list(map(self.calculate_next_position, current_position, velocities, [duration] * len(current_position)))
+            point.positions = [position + velocity*duration for position, velocity in zip(current_position, velocities)]#list(map(self.calculate_next_position, current_position, velocities, [duration] * len(current_position)))
             point.velocities = velocities
             #self.get_logger().info('Enviando comando de movimentação')
         
@@ -137,13 +137,13 @@ class MoveRobotServerNode(Node):
             if self.gripper1_collision== True and self.gripper2_collision==True:
                 done = True
                 reward = 1
-                self.get_logger().info("🟦Os end effectors tocaram nos grippers. Finalização de episódio.🟦")
+                self.get_logger().info("🟩Os end effectors tocaram no cubo. Finalização de episódio.🟩")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
             elif self.ground_collision==True:
                 done = True
                 reward = -100
-                self.get_logger().info("🟦Houve colisão de um dos links com o solo. Finalização do episódio.🟦")
+                self.get_logger().info("🟥Houve colisão de um dos links com o solo. Finalização do episódio.🟥")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
         '''if done:
