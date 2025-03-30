@@ -3,16 +3,17 @@ from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from functools import partial
 from .six_dof_arm_movement_client import MoveRobotClientNode, ResetClientNode
+import matplotlib.pyplot as plt
 import time
 import numpy as np
 import random
 import math as m
-
+import os
 class QLearningNode(Node):
     def __init__(self):
         super().__init__("q_learning")
         self.velocities = [-1.0, -0.5, 0.0, 0.5, 1.0]
-        self.action_values = np.zeros((8,18,5))
+        self.action_values = np.zeros((8,180,5))
         
     def target_policy(self, state_idx, epsilon=0.1):
         if np.random.rand() < epsilon:
@@ -37,37 +38,61 @@ class QLearningNode(Node):
     
     def get_indices(self, rad_angles):
         if any(not (-m.pi <= angle <= m.pi) for angle in rad_angles):
-            self.reward=-100
+            self.reward = -20
             self.done=True
-            self.get_logger().info(f"Episódio finalizado por conta do robô ter atingido seus limites máximos de movimentação.")
+            self.get_logger().info(f"🟥O robô atingiu os limites máximos de movimentação. Finalização do episódio🟥")
             return [0, 0, 0, 0, 0, 0, 0, 0]
             #raise ValueError("Todos os ângulos devem estar entre 0 e 180 graus.")
-        degree_angles = [(angle *180/m.pi) for angle in rad_angles]
-        return [min(max(0, int(angle // 18)), 17) for angle in degree_angles]
+        degree_angles = [int(((angle *180/m.pi)+180)/2) for angle in rad_angles]
+        return degree_angles #[min(max(0, int(angle // 180)), 179) for angle in degree_angles]
 
     
     def get_velocity_indices(self, input_array, reference_array):
         return [reference_array.index(value) for value in input_array]
 
-    def save_action_values_heatmap(action_values, episode):
-        """
-        Salva um heatmap dos valores de ação.
-        
-        - action_values: array (8, 18, 5) contendo os valores de ação.
-        - episode: número do episódio para nomear o arquivo.
-        """
-        fig, axes = plt.subplots(8, 1, figsize=(10, 20))  # 8 subplots para cada junta
-        for joint in range(8):
-            ax = axes[joint]
-            sns.heatmap(action_values[joint], cmap="viridis", ax=ax, annot=False)
-            ax.set_title(f"Junta {joint + 1}")
-            ax.set_xlabel("Ação (0 a 4)")
-            ax.set_ylabel("Estado (0 a 17)")
 
-        plt.tight_layout()
-        plt.savefig(f"action_values_episode_{episode}.png")
+    def save_episode_time_plot(self, episodes_time_list, save_dpath):
+        
+        plt.plot(np.arange(0,len(episodes_time_list),1), episodes_time_list)
+        plt.title("Tempo de execução por episódio")
+        plt.xlabel("Episódio")
+        plt.ylabel("Tempo de execução (s)")
+        plt.savefig(os.path.join(save_dpath, "tempo_por_episodio.png"))
         plt.close()
         
+    def save_rewards_plot(self, episodes_rewards_list, save_dpath, window_size=10):
+        plt.figure(figsize=(8, 6))
+        
+        # Plotando as recompensas originais
+        plt.plot(np.arange(len(episodes_rewards_list)), episodes_rewards_list, label="Recompensa por Episódio", alpha=0.5)
+        
+        # Calculando e plotando a média móvel
+        if len(episodes_rewards_list) >= window_size:
+            smooth_rewards = np.convolve(episodes_rewards_list, np.ones(window_size)/window_size, mode='valid')
+            plt.plot(np.arange(len(smooth_rewards)), smooth_rewards, label=f"Média Móvel ({window_size} episódios)", color="orange")
+        
+        plt.title("Recompensa por Episódio")
+        plt.xlabel("Episódio")
+        plt.ylabel("Recompensa")
+        plt.legend()
+        plt.grid(True)
+        
+        plt.savefig(os.path.join(save_dpath, "recompensa_por_episodio.png"))
+        plt.close()
+        
+    def save_next_state_plot(self, next_state_list, save_dpath, episode):
+        x = list(range(1, len(next_state_list) + 1))  # Índices fixos
+        linhas = list(zip(*next_state_list))  # Transpor a matriz para obter as linhas
+
+        # Criando o gráfico
+        for i, linha in enumerate(linhas, start=1):
+            plt.plot(x, linha, label=f'Link {i:02d}')
+        plt.title("Next State")
+        plt.xlabel("Episódio")
+        plt.ylabel("Estado")
+        plt.savefig(os.path.join(save_dpath, f"next_state_{episode}.png"))
+        plt.close()
+           
     def q_learning(self,action_values,
                 exploratory_policy,
                 target_policy,
@@ -87,7 +112,11 @@ class QLearningNode(Node):
         six_dof_arm_node = MoveRobotClientNode()
         reset_client = ResetClientNode()
         
+        episode_rewards_list = []
+        episode_time_list = []
+        success_episodes = 0
         for episode in range(1, episodes+1):
+            next_state_list = []
             response = reset_client.send_request()
 
             rclpy.spin_until_future_complete(six_dof_arm_node, response)
@@ -98,8 +127,11 @@ class QLearningNode(Node):
 
             self.get_logger().info(f"⚠️ Episódio {episode} - Estado inicial: {state}, Done inicial: {self.done} ⚠️")
             
-            count = 0
+            episode_number = 0
+            reward_sum = 0
+            start = time.time()
             while not self.done:
+                
                 action = exploratory_policy()
                 # Executa a ação
                 future = six_dof_arm_node.send_goal(joint_names, state, action, duration, False)
@@ -108,35 +140,44 @@ class QLearningNode(Node):
                 next_state = future.result().result.current_position
                 self.done = future.result().result.done
                 self.reward = future.result().result.reward
+                episode_number +=1
+                if episode_number==3000: 
+                    self.get_logger().info(f"🟥 O robô excedeu o número de steps por episódio. Finalização do episódio. 🟥")
+                    self.reward = -20
+                    self.done=True
                 
+                state_idx = self.get_indices(state)        
                 next_state_idx = self.get_indices(next_state)
-                state_idx = self.get_indices(state)         
-                
-                next_action_idx = target_policy(state_idx)
-                #next_action = exploratory_policy()
-
-                
-                #next_action_idx = self.get_velocity_indices(next_action, self.velocities)
+                 
                 action_idx = self.get_velocity_indices(action, self.velocities)
+                next_action_idx = target_policy(next_state_idx)
 
-                #self.get_logger().info(f"Next State: {next_state_idx}    |    Next Action: {next_action_idx}")
+
                 qsa = self.action_values[np.arange(8), state_idx, action_idx]
+                #self.get_logger().info(f"QSA: {qsa}")
 
                 next_qsa = self.action_values[np.arange(8), next_state_idx, next_action_idx]
-
-                self.action_values[np.arange(8), state_idx, action_idx] += [alpha * (self.reward + gamma * i_next_qsa - i_qsa) for i_next_qsa, i_qsa in zip(next_qsa, qsa)]
+                #self.get_logger().info(f"State: {state_idx}    |    Action: {action_idx}    |    Action value: {self.action_values[np.arange(8), state_idx, action_idx]}")
+                self.action_values[np.arange(8), state_idx, action_idx] = [i_qsa + alpha * (self.reward + gamma * i_next_qsa - i_qsa) for i_next_qsa, i_qsa in zip(next_qsa, qsa)]
                 #self.get_logger().info(f"Action Values: {self.action_values}")
                 state = next_state
+                reward_sum += self.reward
+                time.sleep(0.01)
+                if self.reward ==200:
+                    success_episodes += 1
+                    
                 
-                count +=1
                 
-                if count==3000:
-                    self.get_logger().info(f"Episódio finalizado por ter mais de 3000 steps.")
-                    pass
-            if episode % 10 == 0:  # Salva a cada 10 episódios
-                self.save_action_values_heatmap(self.action_values, episode)
-
+                
+            end = time.time()
+            episode_rewards_list.append(reward_sum)
+            episode_time = end-start
+            episode_time_list.append(episode_time)
+            self.save_episode_time_plot(episode_time_list, "/home/livia/rl_6dof_ws/src/sixdof_arm_rl/sixdof_arm_rl/plots")
+            self.save_rewards_plot(episode_rewards_list, "/home/livia/rl_6dof_ws/src/sixdof_arm_rl/sixdof_arm_rl/plots")
             
+            
+
 def main(args=None):
     rclpy.init(args=args)  # Inicializa a comunicação ROS
     q_learning_node = QLearningNode()  # Cria a instância do nó

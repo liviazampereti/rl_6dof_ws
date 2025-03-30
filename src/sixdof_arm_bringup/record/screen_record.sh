@@ -9,8 +9,8 @@ while true; do
     
     echo "Iniciando gravação: $OUTPUT_FILE"
     
-    # Gravação da tela por 10 minutos (600 segundos)
-    ffmpeg -y -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -t 120 "$OUTPUT_FILE"
+    # Gravação da tela por 10 minutos (600 segundos) com codec H.264 (Main Profile)
+    ffmpeg -y -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -t 120 -c:v libx264 -profile:v main -pix_fmt yuv420p "$OUTPUT_FILE"
 
     echo "Gravação salva: $OUTPUT_FILE"
 

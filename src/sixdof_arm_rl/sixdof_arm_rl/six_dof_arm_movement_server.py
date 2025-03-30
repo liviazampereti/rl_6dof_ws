@@ -136,7 +136,7 @@ class MoveRobotServerNode(Node):
         while time.time() - start_time < duration:
             if self.gripper1_collision== True and self.gripper2_collision==True:
                 done = True
-                reward = 1
+                reward = 100
                 self.get_logger().info("🟩Os end effectors tocaram no cubo. Finalização de episódio.🟩")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
@@ -146,14 +146,6 @@ class MoveRobotServerNode(Node):
                 self.get_logger().info("🟥Houve colisão de um dos links com o solo. Finalização do episódio.🟥")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
-        '''if done:
-            feedback = MoveSixDofArm.Feedback()
-            feedback.current_position = point.positions
-            feedback.reward = reward
-            feedback.done = done
-            goal_handle.publish_feedback(feedback)
-
-            self.get_logger().info("⚠️ Feedback enviado antes do reset ⚠️")'''
             #self.reset_robot(joint_names)
         
         return point.positions, reward, done
