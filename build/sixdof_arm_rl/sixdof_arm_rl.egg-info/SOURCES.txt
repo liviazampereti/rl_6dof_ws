@@ -4,6 +4,7 @@ setup.py
 resource/sixdof_arm_rl
 sixdof_arm_rl/__init__.py
 sixdof_arm_rl/arm_control.py
+sixdof_arm_rl/get_gazebo_link_state.py
 sixdof_arm_rl/q_learning.py
 sixdof_arm_rl/six_dof_arm_movement_client.py
 sixdof_arm_rl/six_dof_arm_movement_server.py

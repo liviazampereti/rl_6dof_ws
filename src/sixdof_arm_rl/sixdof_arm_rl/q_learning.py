@@ -9,11 +9,14 @@ import numpy as np
 import random
 import math as m
 import os
+from .get_gazebo_link_state import GetGazeboModelState
+
+
 class QLearningNode(Node):
     def __init__(self):
         super().__init__("q_learning")
         self.velocities = [-1.0, -0.5, 0.0, 0.5, 1.0]
-        self.action_values = np.zeros((8,180,5))
+        self.action_values = np.random.uniform(low=-0.01, high=0.01, size=(8, 60, 5)) # np.zeros((8,180,5))
         
     def target_policy(self, state_idx, epsilon=0.1):
         if np.random.rand() < epsilon:
@@ -43,12 +46,15 @@ class QLearningNode(Node):
             self.get_logger().info(f"🟥O robô atingiu os limites máximos de movimentação. Finalização do episódio🟥")
             return [0, 0, 0, 0, 0, 0, 0, 0]
             #raise ValueError("Todos os ângulos devem estar entre 0 e 180 graus.")
-        degree_angles = [int(((angle *180/m.pi)+180)/2) for angle in rad_angles]
+        degree_angles = [int(((angle *60/m.pi)+60)/2) for angle in rad_angles]
         return degree_angles #[min(max(0, int(angle // 180)), 179) for angle in degree_angles]
 
     
     def get_velocity_indices(self, input_array, reference_array):
         return [reference_array.index(value) for value in input_array]
+    
+    def get_velocity_from_indices(self, input_array, reference_array):
+        return [reference_array[value] for value in input_array]
 
 
     def save_episode_time_plot(self, episodes_time_list, save_dpath):
@@ -111,7 +117,10 @@ class QLearningNode(Node):
         #rclpy.init(args=args) # Initialize ROS communication
         six_dof_arm_node = MoveRobotClientNode()
         reset_client = ResetClientNode()
+        get_state_node = GetGazeboModelState()
         
+        model_name = "arm6_link" 
+        epsilon=0.1
         episode_rewards_list = []
         episode_time_list = []
         success_episodes = 0
@@ -130,9 +139,13 @@ class QLearningNode(Node):
             episode_number = 0
             reward_sum = 0
             start = time.time()
+            
+            if episode%50==0:
+                epsilon -=0.01
             while not self.done:
-                
-                action = exploratory_policy()
+                action = target_policy(self.get_indices(state), epsilon=epsilon)
+                action = self.get_velocity_from_indices(action, self.velocities)
+
                 # Executa a ação
                 future = six_dof_arm_node.send_goal(joint_names, state, action, duration, False)
                 
@@ -146,6 +159,28 @@ class QLearningNode(Node):
                     self.reward = -20
                     self.done=True
                 
+                
+                gripper1_link_position = get_state_node.get_point_position("gripper1_link", (0.0, 0.17, 0.0))   
+                gripper2_link_position = get_state_node.get_point_position("gripper2_link", (0.0, 0.17, 0.0))                
+                box_position = get_state_node.get_point_position("unit_box", (0,0,0))
+                
+                if self.reward==0:
+                    
+                    if gripper1_link_position and box_position:
+                        distance_1 = m.sqrt((gripper1_link_position[0] - box_position[0])**2 + 
+                                            (gripper1_link_position[1]+0.18 - box_position[1])**2 + 
+                                            (gripper1_link_position[2] - box_position[2])**2)
+                        #self.get_logger().info(f"Distância: {distance:.3f} metros")
+                        
+                    if gripper2_link_position and box_position:
+                        distance_2 = m.sqrt((gripper2_link_position[0] - box_position[0])**2 + 
+                                            (gripper2_link_position[1]+0.18 - box_position[1])**2 + 
+                                            (gripper2_link_position[2] - box_position[2])**2)
+                        
+                    distance = (distance_1+distance_2)
+                    self.reward = -50*((distance/2.24))
+                    
+                self.get_logger().info(f"Reward: {self.reward}")
                 state_idx = self.get_indices(state)        
                 next_state_idx = self.get_indices(next_state)
                  
@@ -156,12 +191,22 @@ class QLearningNode(Node):
                 qsa = self.action_values[np.arange(8), state_idx, action_idx]
                 #self.get_logger().info(f"QSA: {qsa}")
 
-                next_qsa = self.action_values[np.arange(8), next_state_idx, next_action_idx]
+                #next_qsa = self.action_values[np.arange(8), next_state_idx, next_action_idx]
+                next_qsa = np.argmax(self.action_values[np.arange(8), next_state_idx], axis=1)
                 #self.get_logger().info(f"State: {state_idx}    |    Action: {action_idx}    |    Action value: {self.action_values[np.arange(8), state_idx, action_idx]}")
-                self.action_values[np.arange(8), state_idx, action_idx] = [i_qsa + alpha * (self.reward + gamma * i_next_qsa - i_qsa) for i_next_qsa, i_qsa in zip(next_qsa, qsa)]
+                
+                for i in range(8):
+                    self.action_values[i, state_idx[i], action_idx[i]] += alpha * (
+                        self.reward + gamma * next_qsa[i] - qsa[i]
+                    )
+    
+                #self.action_values[np.arange(8), state_idx, action_idx] = [i_qsa + alpha * (self.reward + gamma * i_next_qsa - i_qsa) for i_next_qsa, i_qsa in zip(next_qsa, qsa)]
                 #self.get_logger().info(f"Action Values: {self.action_values}")
                 state = next_state
                 reward_sum += self.reward
+                
+                
+
                 time.sleep(0.01)
                 if self.reward ==200:
                     success_episodes += 1
@@ -181,7 +226,8 @@ class QLearningNode(Node):
 def main(args=None):
     rclpy.init(args=args)  # Inicializa a comunicação ROS
     q_learning_node = QLearningNode()  # Cria a instância do nó
-
+    
+    
     episodes = 3000  # Número de episódios
     duration = 0.1   # Duração da ação
     alpha = 0.1

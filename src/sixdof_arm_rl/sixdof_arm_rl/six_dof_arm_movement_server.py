@@ -110,7 +110,7 @@ class MoveRobotServerNode(Node):
     def move_robot(self, point, msg, joint_names, current_position, velocities, duration, reset, goal_handle):
         """ Move o robô e monitora colisões em paralelo """
         done = False
-        reward = -1
+        reward = 0
         
         self.collision_detected = threading.Event()
         self.gripper1_collision = False  # Estado de colisão do gripper1
@@ -136,13 +136,13 @@ class MoveRobotServerNode(Node):
         while time.time() - start_time < duration:
             if self.gripper1_collision== True and self.gripper2_collision==True:
                 done = True
-                reward = 100
+                reward = 500
                 self.get_logger().info("🟩Os end effectors tocaram no cubo. Finalização de episódio.🟩")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
             elif self.ground_collision==True:
                 done = True
-                reward = -100
+                reward = -20
                 self.get_logger().info("🟥Houve colisão de um dos links com o solo. Finalização do episódio.🟥")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break
