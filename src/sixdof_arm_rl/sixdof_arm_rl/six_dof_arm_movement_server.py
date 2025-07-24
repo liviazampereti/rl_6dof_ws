@@ -136,7 +136,7 @@ class MoveRobotServerNode(Node):
         while time.time() - start_time < duration:
             if self.gripper1_collision== True and self.gripper2_collision==True:
                 done = True
-                reward = 500
+                reward = 1000
                 self.get_logger().info("🟩Os end effectors tocaram no cubo. Finalização de episódio.🟩")
                 self.get_logger().info("Interrompendo movimentação devido a colisão.")
                 break

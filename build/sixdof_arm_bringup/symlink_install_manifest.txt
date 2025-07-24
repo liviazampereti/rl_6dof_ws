@@ -1,4 +1,5 @@
 /home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup//launch/gazebo.launch.xml
+/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup//launch/gazebo_deep_q_learning.launch.xml
 /home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup//launch/gazebo_rl.launch.xml
 /home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup//launch/rviz_display.launch.xml
 /home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup//worlds/box_world.world
