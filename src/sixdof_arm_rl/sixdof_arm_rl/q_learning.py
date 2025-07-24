@@ -1,3 +1,140 @@
+'''import rclpy
+from rclpy.node import Node
+from .six_dof_arm_movement_client import MoveRobotClientNode, ResetClientNode
+import time
+import numpy as np
+import random
+import math as m
+from utils.reward_function import reward_by_block_gripper_distance
+from utils.epsilon_decay import linear_epsilon_decay
+from utils.utils import *
+from utils.plots import *
+from utils import config
+
+seed = 42
+random.seed(seed)
+np.random.seed(seed)
+
+class QLearningNode(Node):
+    def __init__(self):
+        super().__init__("q_learning")
+               
+    def q_learning(action_values,
+                target_policy,
+                joint_names,
+                velocities,
+                episodes,
+                duration,
+                alpha=0.1,
+                gamma=0.99,
+                epsilon=0.1):
+
+        
+        #Inicializando nós de movimentação e reset do robô
+        six_dof_arm_node = MoveRobotClientNode()
+        reset_client = ResetClientNode()
+        
+        #Obtendo dados de data e hora para salvar plots
+        data_formatada = get_date_time()
+        
+        #Inicializando listas para armazenar dados de treinamento
+        episode_rewards_list = []
+        episode_time_list = []
+
+        for episode in range(1, episodes+1):
+            #Resetando o robô para a posição inicial
+            response = reset_client.send_request()
+            rclpy.spin_until_future_complete(six_dof_arm_node, response)
+            state = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+            done = False
+            reward = None
+            self.get_logger().info(f"⚠️ Episódio {episode} - Estado inicial: {state}, Done inicial: {done} ⚠️")
+            
+            #Reiniciando variáveis de episódio
+            step = 0
+            reward_sum = 0
+            start = time.time()
+            
+            #Cálculo do epsilon decay
+            epsilon = linear_epsilon_decay(episode, epsilon)
+            
+            while not done:
+                step +=1
+                #Checa se ultrapassou o limite máximo de steps (3000) ou o limite de movimentação das juntas            
+                reward, done = check_steps(step, 3000)
+                reward, done, state = check_robot_limit(state) 
+                
+                #Q-Learning: Execução de ação de um step
+                action = target_policy(normalize_state(state), action_values, epsilon=epsilon)
+                action = get_velocity_from_indices(action, velocities)
+                future = six_dof_arm_node.send_goal(joint_names, state, action, duration, False)
+                
+                rclpy.spin_until_future_complete(six_dof_arm_node, future)
+                next_state = future.result().result.current_position
+                done = future.result().result.done
+                reward = future.result().result.reward
+
+                
+                #Cálculo da função recompensa por distância
+                if reward==0:
+                    reward = reward_by_block_gripper_distance() 
+                    self.get_logger().info(f"Reward: {reward}")
+                    
+                state_idx = normalize_state(state)        
+                next_state_idx = normalize_state(next_state)
+                action_idx = get_velocity_indices(action, velocities)
+                
+                #Cálculo do qsa e next_qsa
+                qsa = action_values[np.arange(8), state_idx, action_idx]
+                next_qsa = np.argmax(action_values[np.arange(8), next_state_idx], axis=1)
+                                
+                for i in range(8):
+                    action_values[i, state_idx[i], action_idx[i]] += alpha * (
+                        reward + gamma * next_qsa[i] - qsa[i]
+                    )
+                    
+                #Atualização do próximo estado
+                state = next_state
+                reward_sum += reward
+                time.sleep(0.01)
+
+            end = time.time()
+            episode_time = end-start
+            episode_rewards_list.append(reward_sum)
+            
+            episode_time_list.append(episode_time)
+            save_episode_time_plot(episode_time_list, data_formatada, "/home/livia/rl_6dof_ws/src/sixdof_arm_rl/sixdof_arm_rl/plots")
+            save_rewards_plot(episode_rewards_list, data_formatada, "/home/livia/rl_6dof_ws/src/sixdof_arm_rl/sixdof_arm_rl/plots")
+            
+            
+
+def main(args=None):
+    if __name__ == '__main__':
+        rclpy.init(args=args)  
+        q_learning_node = QLearningNode() 
+        joint_names = config.joint_names
+        velocities = config.velocities
+        
+        episodes = 3000  
+        duration = 0.1   
+        alpha = 0.1
+        gamma = 0.99
+        action_values = np.random.uniform(low=-0.01, high=0.01, size=(8, 60, 5))
+
+        q_learning_node.q_learning(
+            action_values = action_values,
+            target_policy = q_learning_target_policy,
+            joint_names = joint_names,
+            velocities = velocities,
+            episodes = episodes,
+            duration = duration,
+            alpha = alpha,
+            gamma = gamma
+        )
+
+        rclpy.spin(q_learning_node)
+        rclpy.shutdown() '''
+        
 import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint

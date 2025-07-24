@@ -1,0 +1,141 @@
+[0.022s] Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl_sixdof_env) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces -- -j4 -l4
+[0.096s] [  2%] Built target sixdof_arm_interfaces__cpp
+[0.099s] [ 12%] Built target sixdof_arm_interfaces__rosidl_generator_c
+[0.107s] [ 12%] Built target ament_cmake_python_symlink_sixdof_arm_interfaces
+[0.148s] [ 23%] Built target sixdof_arm_interfaces__rosidl_typesupport_cpp
+[0.155s] [ 33%] Built target sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c
+[0.155s] [ 43%] Built target sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.168s] [ 53%] Built target sixdof_arm_interfaces__rosidl_typesupport_introspection_cpp
+[0.186s] [ 64%] Built target sixdof_arm_interfaces__rosidl_typesupport_introspection_c
+[0.190s] [ 74%] Built target sixdof_arm_interfaces__rosidl_typesupport_c
+[0.216s] [ 74%] Built target sixdof_arm_interfaces
+[0.242s] [ 76%] Built target sixdof_arm_interfaces__py
+[0.269s] [ 84%] Built target sixdof_arm_interfaces__rosidl_generator_py
+[0.307s] [ 89%] Built target sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.307s] [ 94%] Built target sixdof_arm_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.308s] [100%] Built target sixdof_arm_interfaces__rosidl_typesupport_c__pyext
+[0.475s] running egg_info
+[0.488s] writing sixdof_arm_interfaces.egg-info/PKG-INFO
+[0.489s] writing dependency_links to sixdof_arm_interfaces.egg-info/dependency_links.txt
+[0.489s] writing top-level names to sixdof_arm_interfaces.egg-info/top_level.txt
+[0.529s] reading manifest file 'sixdof_arm_interfaces.egg-info/SOURCES.txt'
+[0.531s] writing manifest file 'sixdof_arm_interfaces.egg-info/SOURCES.txt'
+[0.561s] [100%] Built target ament_cmake_python_build_sixdof_arm_interfaces_egg
+[0.572s] Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl_sixdof_env) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces -- -j4 -l4
+[0.574s] Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl_sixdof_env) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces
+[0.582s] -- Install configuration: ""
+[0.582s] -- Execute custom install script
+[0.583s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/ament_index/resource_index/rosidl_interfaces/sixdof_arm_interfaces
+[0.583s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__functions.h
+[0.583s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__struct.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__type_support.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/move_six_dof_arm.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__functions.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__struct.h
+[0.584s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__type_support.h
+[0.585s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/reset_arm.h
+[0.585s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/library_path.sh
+[0.585s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/library_path.dsv
+[0.586s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__rosidl_typesupport_fastrtps_c.h
+[0.586s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.586s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__rosidl_typesupport_fastrtps_c.h
+[0.587s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__rosidl_typesupport_introspection_c.h
+[0.587s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.587s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__rosidl_typesupport_introspection_c.h
+[0.587s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__builder.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__struct.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__traits.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__type_support.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/move_six_dof_arm.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__builder.hpp
+[0.588s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__struct.hpp
+[0.589s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__traits.hpp
+[0.589s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__type_support.hpp
+[0.589s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/reset_arm.hpp
+[0.590s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__rosidl_typesupport_fastrtps_cpp.hpp
+[0.590s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.590s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__rosidl_typesupport_fastrtps_cpp.hpp
+[0.590s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/action/detail/move_six_dof_arm__rosidl_typesupport_introspection_cpp.hpp
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/include/sixdof_arm_interfaces/sixdof_arm_interfaces/srv/detail/reset_arm__rosidl_typesupport_introspection_cpp.hpp
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/pythonpath.sh
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/pythonpath.dsv
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.591s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.592s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.592s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/__init__.py
+[0.592s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/_sixdof_arm_interfaces_s.ep.rosidl_typesupport_c.c
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/_sixdof_arm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/_sixdof_arm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/action/__init__.py
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/action/_move_six_dof_arm.py
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/action/_move_six_dof_arm_s.c
+[0.593s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/libsixdof_arm_interfaces__rosidl_generator_py.so
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/srv/__init__.py
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/srv/_reset_arm.py
+[0.594s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/srv/_reset_arm_s.c
+[0.595s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.595s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.596s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/sixdof_arm_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.596s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/srv/ResetArm.idl
+[0.596s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/action/MoveSixDofArm.idl
+[0.596s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/srv/ResetArm.srv
+[0.596s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/srv/ResetArm_Request.msg
+[0.597s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/srv/ResetArm_Response.msg
+[0.597s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/action/MoveSixDofArm.action
+[0.597s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/ament_index/resource_index/package_run_dependencies/sixdof_arm_interfaces
+[0.597s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/ament_index/resource_index/parent_prefix_path/sixdof_arm_interfaces
+[0.597s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/ament_prefix_path.sh
+[0.598s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/ament_prefix_path.dsv
+[0.598s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/path.sh
+[0.598s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/environment/path.dsv
+[0.598s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/local_setup.bash
+[0.598s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/local_setup.sh
+[0.599s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/local_setup.zsh
+[0.599s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/local_setup.dsv
+[0.599s] -- Symlinking: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.dsv
+[0.608s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/ament_index/resource_index/packages/sixdof_arm_interfaces
+[0.608s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.609s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.610s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfacesConfig.cmake
+[0.610s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfacesConfig-version.cmake
+[0.610s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.xml
+[0.610s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_generator_c.so
+[0.611s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.611s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_introspection_c.so
+[0.611s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_c.so
+[0.612s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.612s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.612s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_typesupport_cpp.so
+[0.733s] Listing '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces'...
+[0.733s] Listing '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/action'...
+[0.733s] Listing '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages/sixdof_arm_interfaces/srv'...
+[0.737s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/libsixdof_arm_interfaces__rosidl_generator_py.so
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_generator_cExport.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.738s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_cExport.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_generator_cppExport.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_cppExport.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/sixdof_arm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.739s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_generator_pyExport.cmake
+[0.740s] -- Up-to-date: /home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/cmake/export_sixdof_arm_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.741s] Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(rl_sixdof_env) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces

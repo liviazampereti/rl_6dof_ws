@@ -26,7 +26,8 @@ setup(
             "six_dof_arm_reset_server = sixdof_arm_rl.six_dof_arm_reset_server:main",
             "six_dof_arm_reset_client = sixdof_arm_rl.six_dof_arm_reset_client:main",
             "get_gazebo_link_state = sixdof_arm_rl.get_gazebo_link_state:main",
-            "q_learning = sixdof_arm_rl.q_learning:main"
+            "q_learning = sixdof_arm_rl.q_learning:main",
+            "deep_q_learning = sixdof_arm_rl.deep_q_learning:main"
                        
         ],
     },

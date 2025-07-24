@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/livia/anaconda3/envs/rl_sixdof_env/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'sixdof-arm-rl','console_scripts','six_dof_arm_reset_server'
 import re
 import sys
