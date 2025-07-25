@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src=aux/reinforce_arm.png alt="Exemplo imagem">
+<img src=utils/reinforce_arm.png alt="Exemplo imagem">
 
 </p>
 
@@ -16,7 +16,7 @@
 > Este projeto de TCC implementa dois algoritmos de aprendizado por reforço (Q-Learning e Deep Q-Learning) para controlar um braço robótico simulado no ambiente Gazebo com ROS 2. O objetivo é treinar o robô a realizar a tarefa de tocar o end-effector em um bloco fixo no solo. A simulação permite testar estratégias de controle inteligentes antes da implementação em robôs físicos.
 
 
-<img src="aux/treinamento.gif" alt="Exemplo imagem">
+<img src="utils/treinamento.gif" alt="Exemplo imagem">
 
 ## 🚀 Instalando ReinforceArm
 
