@@ -1,0 +1,1 @@
+/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/ament_cmake_core/sixdof_arm_interfacesConfig-version.cmake

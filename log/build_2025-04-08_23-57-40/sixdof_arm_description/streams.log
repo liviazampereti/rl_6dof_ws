@@ -1,0 +1,37 @@
+[0.018s] Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_description -- -j4 -l4
+[0.123s] Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_description -- -j4 -l4
+[0.140s] Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_description
+[0.152s] -- Install configuration: ""
+[0.154s] -- Execute custom install script
+[0.156s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/lidar_sensor.urdf.xacro
+[0.156s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/mobile_base.urdf
+[0.157s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/mobile_base.urdf.xacro
+[0.158s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/ros2_control.xacro
+[0.158s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/sixdof_arm.trans
+[0.159s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/sixdof_arm.urdf.xacro
+[0.160s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//urdf/sixdof_arm_properties.urdf.xacro
+[0.162s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/base_link.stl
+[0.162s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/gripper.stl
+[0.163s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_1.stl
+[0.164s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_2.stl
+[0.165s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_3.stl
+[0.165s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_4.stl
+[0.165s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_5.stl
+[0.166s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//meshes/sixdof_arm/link_6.stl
+[0.167s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description//config/sixdof_arm_controllers.yaml
+[0.167s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/ament_index/resource_index/package_run_dependencies/sixdof_arm_description
+[0.168s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/ament_index/resource_index/parent_prefix_path/sixdof_arm_description
+[0.169s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/environment/ament_prefix_path.sh
+[0.169s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/environment/ament_prefix_path.dsv
+[0.170s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/environment/path.sh
+[0.171s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/environment/path.dsv
+[0.172s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/local_setup.bash
+[0.172s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/local_setup.sh
+[0.173s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/local_setup.zsh
+[0.174s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/local_setup.dsv
+[0.174s] -- Symlinking: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.dsv
+[0.192s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/ament_index/resource_index/packages/sixdof_arm_description
+[0.193s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/cmake/sixdof_arm_descriptionConfig.cmake
+[0.193s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/cmake/sixdof_arm_descriptionConfig-version.cmake
+[0.194s] -- Up-to-date symlink: /home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.xml
+[0.204s] Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_description

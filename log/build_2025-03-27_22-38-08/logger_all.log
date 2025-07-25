@@ -1,0 +1,343 @@
+[0.112s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.112s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ca4969457e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ca496944c40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ca496944c40>>)
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.294s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/livia/rl_6dof_ws'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'ros'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['cmake', 'python']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(plots) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extension 'ignore_ament_install'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extensions ['colcon_pkg']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extensions ['colcon_meta']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extension 'colcon_meta'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extensions ['ros']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_bringup) by extension 'ros'
+[0.312s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sixdof_arm_bringup' with type 'ros.ament_cmake' and name 'sixdof_arm_bringup'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extension 'ignore_ament_install'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extensions ['colcon_pkg']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extension 'colcon_pkg'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extensions ['colcon_meta']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extension 'colcon_meta'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_description) by extension 'ros'
+[0.314s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sixdof_arm_description' with type 'ros.ament_cmake' and name 'sixdof_arm_description'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extension 'ignore'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extension 'colcon_meta'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extensions ['ros']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_interfaces) by extension 'ros'
+[0.315s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sixdof_arm_interfaces' with type 'ros.ament_cmake' and name 'sixdof_arm_interfaces'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/sixdof_arm_rl) by extension 'ros'
+[0.317s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sixdof_arm_rl' with type 'ros.ament_python' and name 'sixdof_arm_rl'
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.369s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install
+[0.369s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/livia/ros2_ws/install
+[0.370s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/livia/rl_6dof_ws/install
+[0.372s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 339 installed packages in /opt/ros/humble
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_target' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.452s] DEBUG:colcon.colcon_core.verb:Building package 'sixdof_arm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/livia/rl_6dof_ws/build/sixdof_arm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/livia/rl_6dof_ws/install/sixdof_arm_description', 'merge_install': False, 'path': '/home/livia/rl_6dof_ws/src/sixdof_arm_description', 'symlink_install': True, 'test_result_base': None}
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.452s] DEBUG:colcon.colcon_core.verb:Building package 'sixdof_arm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces', 'merge_install': False, 'path': '/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_target' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_clean_cache' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_clean_first' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'cmake_force_configure' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'ament_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'catkin_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_rl' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.453s] DEBUG:colcon.colcon_core.verb:Building package 'sixdof_arm_rl' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/livia/rl_6dof_ws/build/sixdof_arm_rl', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/livia/rl_6dof_ws/install/sixdof_arm_rl', 'merge_install': False, 'path': '/home/livia/rl_6dof_ws/src/sixdof_arm_rl', 'symlink_install': True, 'test_result_base': None}
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_target' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'sixdof_arm_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.453s] DEBUG:colcon.colcon_core.verb:Building package 'sixdof_arm_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/livia/rl_6dof_ws/build/sixdof_arm_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup', 'merge_install': False, 'path': '/home/livia/rl_6dof_ws/src/sixdof_arm_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.454s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.455s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.455s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces' with build type 'ament_cmake'
+[0.455s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces'
+[0.461s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.462s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.462s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.467s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/livia/rl_6dof_ws/src/sixdof_arm_description' with build type 'ament_cmake'
+[0.467s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/livia/rl_6dof_ws/src/sixdof_arm_description'
+[0.468s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.468s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces -- -j4 -l4
+[0.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_description -- -j4 -l4
+[0.593s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_description -- -j4 -l4
+[0.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_description
+[0.663s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_description)
+[0.664s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_description
+[0.679s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description' for CMake module files
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description' for CMake config files
+[0.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_description', 'cmake_prefix_path')
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.ps1'
+[0.686s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.dsv'
+[0.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.sh'
+[0.690s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/bin'
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/lib/pkgconfig/sixdof_arm_description.pc'
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/lib/python3.10/site-packages'
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/bin'
+[0.692s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.ps1'
+[0.694s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.dsv'
+[0.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.sh'
+[0.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.bash'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.zsh'
+[0.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/colcon-core/packages/sixdof_arm_description)
+[0.703s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_description)
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description' for CMake module files
+[0.704s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description' for CMake config files
+[0.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_description', 'cmake_prefix_path')
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.ps1'
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/hook/cmake_prefix_path.sh'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/bin'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/lib/pkgconfig/sixdof_arm_description.pc'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/lib/python3.10/site-packages'
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_description/bin'
+[0.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.dsv'
+[0.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.sh'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.bash'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/sixdof_arm_description/package.zsh'
+[0.713s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_description/share/colcon-core/packages/sixdof_arm_description)
+[1.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces -- -j4 -l4
+[1.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces
+[1.719s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_interfaces)
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces' for CMake module files
+[1.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_interfaces
+[1.720s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces' for CMake config files
+[1.721s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_interfaces', 'cmake_prefix_path')
+[1.721s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.ps1'
+[1.722s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.dsv'
+[1.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.sh'
+[1.723s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib'
+[1.723s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_interfaces', 'ld_library_path_lib')
+[1.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.ps1'
+[1.724s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.dsv'
+[1.724s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.sh'
+[1.724s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/bin'
+[1.724s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/pkgconfig/sixdof_arm_interfaces.pc'
+[1.725s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/python3.10/site-packages'
+[1.725s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/bin'
+[1.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.ps1'
+[1.726s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.dsv'
+[1.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.sh'
+[1.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.bash'
+[1.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.zsh'
+[1.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/colcon-core/packages/sixdof_arm_interfaces)
+[1.728s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_interfaces)
+[1.728s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces' for CMake module files
+[1.729s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces' for CMake config files
+[1.729s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_interfaces', 'cmake_prefix_path')
+[1.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.ps1'
+[1.730s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.dsv'
+[1.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/cmake_prefix_path.sh'
+[1.731s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib'
+[1.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_interfaces', 'ld_library_path_lib')
+[1.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.ps1'
+[1.732s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.dsv'
+[1.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/hook/ld_library_path_lib.sh'
+[1.732s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/bin'
+[1.732s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/pkgconfig/sixdof_arm_interfaces.pc'
+[1.733s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/python3.10/site-packages'
+[1.733s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/bin'
+[1.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.ps1'
+[1.734s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.dsv'
+[1.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.sh'
+[1.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.bash'
+[1.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/sixdof_arm_interfaces/package.zsh'
+[1.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/share/colcon-core/packages/sixdof_arm_interfaces)
+[1.736s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/livia/rl_6dof_ws/src/sixdof_arm_rl' with build type 'ament_python'
+[1.736s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_rl', 'ament_prefix_path')
+[1.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/ament_prefix_path.ps1'
+[1.737s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/ament_prefix_path.dsv'
+[1.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/ament_prefix_path.sh'
+[1.738s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.738s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.030s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/livia/rl_6dof_ws/src/sixdof_arm_rl'
+[2.030s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.030s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.523s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_rl': CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_description CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/livia/rl_6dof_ws/build/sixdof_arm_rl/build --no-deps symlink_data
+[3.014s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_rl', 'pythonpath_develop')
+[3.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/build/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath_develop.ps1'
+[3.015s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_rl' returned '0': CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_description CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/livia/rl_6dof_ws/build/sixdof_arm_rl/build --no-deps symlink_data
+[3.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/build/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath_develop.dsv'
+[3.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/build/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath_develop.sh'
+[3.016s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl' for CMake module files
+[3.016s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl' for CMake config files
+[3.017s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib'
+[3.017s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/bin'
+[3.017s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/pkgconfig/sixdof_arm_rl.pc'
+[3.017s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages'
+[3.017s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_rl', 'pythonpath')
+[3.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath.ps1'
+[3.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath.dsv'
+[3.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/hook/pythonpath.sh'
+[3.019s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/bin'
+[3.019s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_rl)
+[3.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/package.ps1'
+[3.020s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/package.dsv'
+[3.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/package.sh'
+[3.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/package.bash'
+[3.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/sixdof_arm_rl/package.zsh'
+[3.022s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_rl/share/colcon-core/packages/sixdof_arm_rl)
+[3.022s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/livia/rl_6dof_ws/src/sixdof_arm_bringup' with build type 'ament_cmake'
+[3.022s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/livia/rl_6dof_ws/src/sixdof_arm_bringup'
+[3.022s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.022s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_bringup': AMENT_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/livia/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_bringup -- -j4 -l4
+[3.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_bringup' returned '0': AMENT_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/livia/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/livia/rl_6dof_ws/build/sixdof_arm_bringup -- -j4 -l4
+[3.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/livia/rl_6dof_ws/build/sixdof_arm_bringup': AMENT_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/livia/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_bringup
+[3.113s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_bringup)
+[3.113s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup' for CMake module files
+[3.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/livia/rl_6dof_ws/build/sixdof_arm_bringup' returned '0': AMENT_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/opt/ros/humble CMAKE_PREFIX_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces:/home/livia/rl_6dof_ws/install/sixdof_arm_description:/home/livia/ros2_ws/install/my_robot_bringup:/home/livia/ros2_ws/install/my_robot_interfaces:/home/livia/ros2_ws/install/my_robot_description:/home/livia/ros2_ws/install/my_cpp_pkg:/home/livia/rl_6dof_ws/install/sixdof_arm_bringup:/home/livia/ros2_ws/install/my_py_pkg:/home/livia/ros2_ws/install/actions_py:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all:/home/livia/rl_6dof_ws/install/sixdof_arm_rl:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib:/home/livia/ros2_ws/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/livia/rl_6dof_ws/build/sixdof_arm_rl:/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/livia/ros2_ws/install/actions_py/lib/python3.10/site-packages:/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages:/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages:/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/livia/rl_6dof_ws/build/sixdof_arm_bringup
+[3.114s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup' for CMake config files
+[3.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_bringup', 'cmake_prefix_path')
+[3.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.ps1'
+[3.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.dsv'
+[3.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.sh'
+[3.116s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/bin'
+[3.116s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/lib/pkgconfig/sixdof_arm_bringup.pc'
+[3.117s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/lib/python3.10/site-packages'
+[3.117s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/bin'
+[3.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.ps1'
+[3.117s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.dsv'
+[3.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.sh'
+[3.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.bash'
+[3.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.zsh'
+[3.119s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/colcon-core/packages/sixdof_arm_bringup)
+[3.120s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sixdof_arm_bringup)
+[3.120s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup' for CMake module files
+[3.121s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup' for CMake config files
+[3.121s] Level 1:colcon.colcon_core.shell:create_environment_hook('sixdof_arm_bringup', 'cmake_prefix_path')
+[3.121s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.ps1'
+[3.122s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.dsv'
+[3.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/hook/cmake_prefix_path.sh'
+[3.123s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/bin'
+[3.123s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/lib/pkgconfig/sixdof_arm_bringup.pc'
+[3.123s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/lib/python3.10/site-packages'
+[3.123s] Level 1:colcon.colcon_core.environment:checking '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/bin'
+[3.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.ps1'
+[3.124s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.dsv'
+[3.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.sh'
+[3.125s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.bash'
+[3.125s] INFO:colcon.colcon_core.shell:Creating package script '/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/sixdof_arm_bringup/package.zsh'
+[3.125s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/livia/rl_6dof_ws/install/sixdof_arm_bringup/share/colcon-core/packages/sixdof_arm_bringup)
+[3.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.126s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.134s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.134s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.134s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.149s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.150s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/livia/rl_6dof_ws/install/local_setup.ps1'
+[3.151s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/livia/rl_6dof_ws/install/_local_setup_util_ps1.py'
+[3.184s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/livia/rl_6dof_ws/install/setup.ps1'
+[3.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/livia/rl_6dof_ws/install/local_setup.sh'
+[3.187s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/livia/rl_6dof_ws/install/_local_setup_util_sh.py'
+[3.188s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/livia/rl_6dof_ws/install/setup.sh'
+[3.190s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/livia/rl_6dof_ws/install/local_setup.bash'
+[3.191s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/livia/rl_6dof_ws/install/setup.bash'
+[3.193s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/livia/rl_6dof_ws/install/local_setup.zsh'
+[3.194s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/livia/rl_6dof_ws/install/setup.zsh'

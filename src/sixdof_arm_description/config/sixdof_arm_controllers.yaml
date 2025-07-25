@@ -1,0 +1,63 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+joint_trajectory_controller:
+  ros__parameters:
+    type: joint_trajectory_controller/JointTrajectoryController 
+
+    command_interfaces:
+      - velocity
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - base_arm1_joint
+      - arm1_arm2_joint
+      - arm2_arm3_joint
+      - arm3_arm4_joint
+      - arm4_arm5_joint
+      - arm5_arm6_joint
+      - arm6_gripper1_joint
+      - arm6_gripper2_joint
+
+
+    state_publish_rate: 50.0 # Defaults to 50
+    action_monitor_rate: 20.0 # Defaults to 20
+
+    allow_partial_joints_goal: false # Defaults to false
+    hardware_state_has_offset: true
+    deduce_states_from_derivatives: true
+    
+    constraints:
+      base_arm1_joint:
+        goal: 0.1  # Tempo para atingir a meta (segundos)
+        stopped_velocity_tolerance: 0.01  # Tolerância de velocidade ao parar
+      arm1_arm2_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm2_arm3_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm3_arm4_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm4_arm5_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm5_arm6_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm6_gripper1_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01
+      arm6_gripper2_joint:
+        goal: 0.1
+        stopped_velocity_tolerance: 0.01

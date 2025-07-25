@@ -1,0 +1,6 @@
+action/MoveSixDofArm.action
+action/MoveSixDofArm.idl
+srv/ResetArm.idl
+srv/ResetArm.srv
+srv/ResetArm_Request.msg
+srv/ResetArm_Response.msg

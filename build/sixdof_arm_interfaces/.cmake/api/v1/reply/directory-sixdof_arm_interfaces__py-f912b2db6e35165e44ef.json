@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "sixdof_arm_interfaces__py",
+		"source" : "/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/sixdof_arm_interfaces__py"
+	}
+}

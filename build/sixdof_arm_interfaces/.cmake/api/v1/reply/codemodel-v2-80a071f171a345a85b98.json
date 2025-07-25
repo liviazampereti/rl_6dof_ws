@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7e73ca358e32623a645e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "sixdof_arm_interfaces__py",
+					"jsonFile" : "directory-sixdof_arm_interfaces__py-f912b2db6e35165e44ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces/sixdof_arm_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "sixdof_arm_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_sixdof_arm_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_sixdof_arm_interfaces_egg-01c6e3b99acf6a380b99.json",
+					"name" : "ament_cmake_python_build_sixdof_arm_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_sixdof_arm_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_sixdof_arm_interfaces-015160fc449bbfef20e3.json",
+					"name" : "ament_cmake_python_symlink_sixdof_arm_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces-3018845938ef70c61acc.json",
+					"name" : "sixdof_arm_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__cpp-1eaedb18223d3ac8b27d.json",
+					"name" : "sixdof_arm_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sixdof_arm_interfaces__py::@641508d081d20c8a0dc3",
+					"jsonFile" : "target-sixdof_arm_interfaces__py-0e951a1a69c826a2b3b4.json",
+					"name" : "sixdof_arm_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_generator_c-76c02977edbfd37c92cf.json",
+					"name" : "sixdof_arm_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_generator_py-07dd0b54f3b383f648fd.json",
+					"name" : "sixdof_arm_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_c-9bc43cb55b708a3abf9e.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_c__pyext-dec04fa3add24b68451c.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_cpp-f70e14db7ae022007961.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c-59ec17e4f2039e50cfcd.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c__pyext-222327839ab9dcde12eb.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cpp-f6cbba1946bf8e162caf.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_introspection_c-139792df27c9d521659d.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_introspection_c__pyext-bec847dd0e95c8dbd664.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces__rosidl_typesupport_introspection_cpp-7627ae6a96e8ce5bbd18.json",
+					"name" : "sixdof_arm_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sixdof_arm_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sixdof_arm_interfaces_uninstall-9581c6aa0bdfd5094b0e.json",
+					"name" : "sixdof_arm_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0df339335df2a34175e1.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/livia/rl_6dof_ws/build/sixdof_arm_interfaces",
+		"source" : "/home/livia/rl_6dof_ws/src/sixdof_arm_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/livia/rl_6dof_ws/build/sixdof_arm_rl",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/python3.11/site-packages",
+        "/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages",
+        "/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages",
+        "/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages",
+        "/home/livia/rl_6dof_ws/build/sixdof_arm_rl",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/livia/rl_6dof_ws/build/sixdof_arm_rl",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_interfaces/lib/python3.11/site-packages",
+        "/home/livia/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages",
+        "/home/livia/ros2_ws/install/my_robot_interfaces/lib/python3.10/site-packages",
+        "/home/livia/Documents/git/Catch-Them-All-Turtlesim-Project/Catch_Them_All_Turtlesim_Project_WS/install/turtlesim_catch_them_all/lib/python3.10/site-packages",
+        "/home/livia/rl_6dof_ws/build/sixdof_arm_rl",
+        "/home/livia/rl_6dof_ws/install/sixdof_arm_rl/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
